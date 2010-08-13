@@ -1,3 +1,7 @@
+1.2.5
+
+better server side INode validation (sgb)
+
 1.2.5.4
 
 * ask users to restart after downloading a map as workaround to 2981890 (sgb)

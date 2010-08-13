@@ -1,0 +1,28 @@
+Thu Aug 12 22:22:01 PDT 2010INFO [main] .->Redirecting std out
+Thu Aug 12 22:22:01 PDT 2010INFO [main] OUT->Trying to listen on port:3303
+
+Thu Aug 12 22:22:01 PDT 2010INFO [main] OUT->Starting database
+
+Thu Aug 12 22:22:02 PDT 2010INFO [main] LobbyServer->Lobby started
+Thu Aug 12 22:25:39 PDT 2010INFO [main] .->Redirecting std out
+Thu Aug 12 22:25:39 PDT 2010INFO [main] OUT->Trying to listen on port:3304
+
+Thu Aug 12 22:25:39 PDT 2010INFO [main] OUT->Starting database
+
+Thu Aug 12 22:25:40 PDT 2010INFO [main] LobbyServer->Lobby started
+Thu Aug 12 22:25:51 PDT 2010INFO [Decoder -Server] LobbyLoginValidator->Successful login from:/127.0.0.1:58372 for user:whatsthis
+Thu Aug 12 22:25:51 PDT 2010INFO [Decoder -Server] AccessLog->LOGIN name:whatsthis ip:127.0.0.1 time_ms:1281677151174 time:Thu Aug 12 22:25:51 PDT 2010
+Thu Aug 12 22:25:51 PDT 2010INFO [Decoder -Server] ServerMessenger->Connection added to:whatsthis port:58372 ip:127.0.0.1
+Thu Aug 12 22:25:51 PDT 2010INFO [games.strategy.thread.ThreadPool:UnifiedMessengerPool:1] ChatController->Chatter:whatsthis port:58372 ip:127.0.0.1 is joining chat:_LOBBY_CHAT
+Thu Aug 12 22:26:18 PDT 2010INFO [Decoder -Server] LobbyLoginValidator->Successful login from:/127.0.0.1:58377 for user:whatsthisqsfaFF
+Thu Aug 12 22:26:18 PDT 2010INFO [Decoder -Server] AccessLog->LOGIN name:whatsthisqsfaFF ip:127.0.0.1 time_ms:1281677178386 time:Thu Aug 12 22:26:18 PDT 2010
+Thu Aug 12 22:26:18 PDT 2010INFO [Decoder -Server] ServerMessenger->Connection added to:whatsthisqsfaFF port:58377 ip:127.0.0.1
+Thu Aug 12 22:26:18 PDT 2010INFO [games.strategy.thread.ThreadPool:UnifiedMessengerPool:1] ChatController->Chatter:whatsthisqsfaFF port:58377 ip:127.0.0.1 is joining chat:_LOBBY_CHAT
+Thu Aug 12 22:26:50 PDT 2010INFO [Decoder -Server] LobbyLoginValidator->Successful login from:/127.0.0.1:58385 for user:whatsthisqsfaFF_lobby_watcher
+Thu Aug 12 22:26:50 PDT 2010INFO [Decoder -Server] AccessLog->LOGIN name:whatsthisqsfaFF_lobby_watcher ip:127.0.0.1 time_ms:1281677210191 time:Thu Aug 12 22:26:50 PDT 2010
+Thu Aug 12 22:26:50 PDT 2010INFO [Decoder -Server] ServerMessenger->Connection added to:whatsthisqsfaFF_lobby_watcher port:58385 ip:127.0.0.1
+Thu Aug 12 22:26:50 PDT 2010INFO [games.strategy.thread.ThreadPool:UnifiedMessengerPool:1] LobbyGameController->Game added:Game Hosted By:whatsthisqsfaFF gameName:??? at:/127.0.0.1:3300 playerCount:1
+Thu Aug 12 22:27:13 PDT 2010INFO [NIO Reader - Server] ChatController->Chatter:whatsthisqsfaFF port:58377 ip:127.0.0.1 has left chat:_LOBBY_CHAT
+Thu Aug 12 22:27:13 PDT 2010INFO [NIO Reader - Server] ServerMessenger->Connection removed:whatsthisqsfaFF port:58377 ip:127.0.0.1
+Thu Aug 12 22:27:15 PDT 2010INFO [NIO Reader - Server] ChatController->Chatter:whatsthis port:58372 ip:127.0.0.1 has left chat:_LOBBY_CHAT
+Thu Aug 12 22:27:15 PDT 2010INFO [NIO Reader - Server] ServerMessenger->Connection removed:whatsthis port:58372 ip:127.0.0.1
