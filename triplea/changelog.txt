@@ -1,0 +1,1793 @@
+1.2.5.4
+
+* ask users to restart after downloading a map as workaround to 2981890 (sgb)
+
+* replace japanese_fade gif with png (veqryn)
+
+* new free french flags (veqryn, crystalct)
+
+* fix bug 2981512 game hangs during purchase units phase with mooreAI (sgb)
+
+Changes for 1.2.5.3
+
+* fix bug 2979108 Multiplayer LL AA guns Java Error (sgb)
+
+Changes for 1.2.5.2
+
+* fix bug 2977842 Black sea zone movement bug (sgb)
+
+* fixed bug ConcurrentModificationException (sgb)
+
+* low luck air now works according the to the Veqryn rules (sgb)
+
+* validate zip file on map download (sgb)
+
+Changes for 1.2.5.1
+
+* fix bug 2973990 repair rules bug plus new lock not held bug (sgb)
+
+* fix bug 2969991 lock not held bug, 1.2.5.0 (sgb)
+
+* fix bug 2970332 low luck aa casualties don't work when movement varies (sgb)
+
+* fix bug 2971204 moore AI out of bounds exception when no transport rules (sgb)
+
+* partial fix for bug (2971193) to-hit of 6 causes dump- need to revisit when moving to Dx (ComradeKev)
+
+* Re-fix bug (2965453) convoy centers/routes with original owners (ComradeKev)
+
+Changes for 1.2.5
+
+* Re-added Japanese_fade.png flag file for use as kamikaze markers in Pacific (ComradeKev)
+
+* Fix bug (2965453) occupiedTerritoryOf doesn't work with Convoy Centers (ComradeKev)
+
+* Add new isTransportAndNotDestroyer match so DDs that can transport don't fall into normal transport rules (ComradeKev)
+
+* Fix bug(2961038) Can transport armor or more than transportCapacity on bomber with paratroops (ComradeKev)
+
+* fix bug stack overflow in NWO 1.7.7 on Hard AI (sgb)
+
+* updated german, italian and neutral flags (Veqryn)
+
+* better packaged windows icon file (Veqryn)
+
+* fix bug 2964947, minimap AI error (sgb)
+
+* allow choosing aa casualty option to work with low luck (sgb)
+
+* fix crash where unloading attacking transports to allied nations when a defending transport was present and the allied transport dies in the battle (sgb)
+
+* fix crash with unloading units to multiple allied territories and multiple transports die (sgb)
+
+* fix low luck aa casualty selection when different plane types are present (sgb)
+
+Changes for 1.2.4
+
+* fix bug (2960696) Strategic Bombing Crash in 1.2.3.0 (sgb)
+
+* fix bug 2961673 crash in strong ai (sgb)
+
+* fix bug 2943370, lock not held (sgb)
+
+* fix exception with casualty selection in low luck (sgb)
+
+* fix bug in strong ai when there are no transport production rules (sgb)
+
+* fix null pointer in strong ai (sgb)
+
+Changes for 1.2.3
+
+* fix downloaded map skins (sgb)
+
+* Add default AI setting for 'Neutral' players in remote games (ComradeKev)
+
+* remove nwo map in default install, this allows it to be updated independently (sgb)
+
+* update xml for big world,great war, update misc images for great war, update flags for great war, update italian cruiser image, update chineese and american aa gun,
+ add various flags, add various missing units (Veqryn, ubernaut, EB (OnanTheBrBr), and U-boat)
+
+* add optional version number to map listing xml file.  This version number will be saved when the game is downloaded.  When the user is asked to delete
+an already downloaded map, the dialog will have the old and new versions in the overwrite message.  Version numbers are 2-4 numbers separated by a '.', eg 1.2, 12.23, 1.2.3, 1.2.3.4  (sgb)
+
+* Tweaked version error message and aircraft landing on CV validation (ComradeKev)
+ 
+* Patch bug () Dump in EasyAI non-combat movement (ComradeKev)
+
+* Patch bug (2953997) Dump in StrongAI non-combat movement (ComradeKev)
+
+* Fix bug (2955224) Low Luck casualties not being taken (ComradeKev)
+
+* Fix bug (2951839) reporting that non-blitzed neutrals are charging fee, causing dumps (ComradeKev)
+
+* Fix bug (2951882) amphib units being ignored (ComradeKev)
+
+* increase max java memory to 256m (sgb)
+
+* new icon for triplea.exe (ubernaut)
+
+Changes for 1.2.2
+
+* update flag images in the base flags folder (u-boat,Veqryn)
+
+* allow flag images to be gif or png, gif's will be preferred if both are available to prevent new images in the base folder from overriding images in mods (sgb)
+
+* Fix null pointer in new AA dice rolling code (ComradeKev)
+
+* Add default AI setting for 'Neutral' players (ComradeKev)
+ 
+* Fix bug related to paratroops and blitzing tank movement (ComradeKev)
+
+* Fix bug (2947241) combined land/amphib blitz with associated sea battle throws exception (ComradeKev)
+ 
+* Add additional unit png files to most base/images/units folders (ComradeKev)
+
+* Fix bug (2945150) 'Neutrals Are Impassable' only valid for aircraft (ComradeKev)
+
+* Fix bug (2943002) AA firing rules with and without low luck (ComradeKev)
+
+* Fix bug (294300) Victory Conditions tweaked (ComradeKev)
+
+* Check 'Allied Air Dependents' property to see if allied air can participate in attack (ComradeKev)
+
+* Fix bug (2936271) Bombers allowed to continue to more battles after dropping (blitzing) paratroops (ComradeKev)
+ 
+* Fix bug (2939602) Allied fighters on attacking carriers (ComradeKev)
+
+* Fix bug (2939915) by tweaking route finding logic (ComradeKev)
+
+* Fix bug (2938275) AA on trns firing at passing aircraft (ComradeKev)
+
+* Change 'No Economic Victory' game property to 'Economic Victory' (ComradeKev)
+
+* Fix displayed Victory City victory message (ComradeKev)
+
+* Fix null pointer if trying to select factory in edit mode (ComradeKev)
+
+* Update NWO map to version 1.7.2 (OnanTheBrBr)
+
+* Fix bug (2933998) null pointer in MoreNAble IA Non Combat movement through sea zones (ComradeKev)
+
+* Fix bug (2933797) Battle Calc in Edit Mode- removed unnecessary checks for edit mode (ComradeKev)
+
+* Allow submersible subs to travel under enemy ships in combat and non-combat (except DDs) (ComradeKev)
+
+* Update options panel height to 15 items to fit on smaller screens (ComradeKev)
+
+* Fix bug (2933341) Exception if paratroop transport cost > bomber capacity (ComradeKev)
+ 
+* Fix bug (2932947) paratroop checking code allowing naval ships to move through enemy SZ (ComradeKev)
+
+Changes for 1.2.1
+
+* Update game icons (ubernaut)
+
+* Fix subs being able to move through enemy fleets in noncombat for WW2v2 (ComradeKev)
+
+* Fix broken code around pacific test cases for new properties (ComradeKev)
+
+* Remove the hardcoded productionRules for non-sea units during Shipyard initialization (ComradeKev)
+
+* Fix bug 2925146 options panel overflows screen in a single column (ComradeKev)
+
+* Fix GameParser to correctly read optional flag for players in the xml playerList (ComradeKev)
+  
+* Fix bug 2926226 fighter movement with owned carriers (ComradeKev)
+
+* Update NWO xml to use the new figher/carrier properties (ComradeKev)
+
+* Break up Fighter/Carrier production rules into atomic components and added several new game properties for them (ComradeKev)
+	Produce fighters on carriers - New fighters can be placed on New carriers
+	Produce new fighters on old carriers - New fighters can be placed on Old carriers
+	Move existing fighters to new carriers - An existing fighter may be moved to a New carrier from an adjacent territory
+	Land existing fighters on new carriers - Existing fighters can end their movement where a new carrier will be placed
+* Add game property support for configurable Victory City thresholds 'xxx Total Victory VCs', 'xxx Honorable Victory VCs', & 'xxx Projection of Power VCs' with xxx being alliance name (ComradeKev)
+
+* Add support for game property to define economic victory conditions in the form of 'xxx Victory' with xxx being alliance name (ComradeKev)
+
+* Abstract victory conditions to read teams/players from XML rather than hardcoded values (ComradeKev)
+
+* Add negateDominatingFirstRoundAttack option for RulesAttatchment- negates dominatingFirstRoundAttack for player (ComradeKev)
+ 
+* Add dominatingFirstRoundAttack option for RulesAttatchment- defenders roll at 1 (ComradeKev)
+
+* Add placementInCapitalRestricted option for RulesAttatchment- restricts unit placement to capital (ComradeKev)
+
+* Add unlimitedProduction option for RulesAttatchment- bypasses limitation of unit placement to factory production (ComradeKev)
+
+* Add 'Neutrals Are Blitzable' property with value of TRUE to NWO (ComradeKev)
+
+* Fix bug 2919694 non blitzing units allowed to incrementally make 2nd move (ComradeKev)
+
+* Fix bug (partial) 2860602 Allied air on carriers group together when carriers move through one another (ComradeKev)
+
+* Fix bug 2922798 transports with mechanized infantry aboard can move 3 spaces (ComradeKev)
+
+* Fix bug 2921117 can't blitz neutrals- added Neutrals Are Blitzable property (ComradeKev)
+
+* rename nwo map to new_world_order_eb, this is all lowercase which works on linux, and matches the other map names (sgb)
+
+* rounded neutral flags (Veqryn)
+
+* Fix bug 2919513 units with 0 attack not getting artillery support (ComradeKev)
+
+Changes for 1.2
+
+* Fix display of factory damage when unit name is "Factory" rather than "factory" (ComradeKev)
+
+* Add more test cases (ComradeKev)
+
+* update to Great War 3.0 (Jason Clark)
+
+* Fix bug 2915452 Shouldn't be able to blitz with non-blitzing units by incrementally moving (ComradeKev)
+
+* Fix bug 2915057 Bombers shouldn't be able to move then pick up paratroops (ComradeKev)
+
+Changes for 1.1.2
+
+* Add more test cases (ComradeKev)
+
+* Upgrade NWO to NWO EB (OnanTheBrBr)
+
+* Fix bug 2909898 2-move units allowed to move 'through' enemy forces (ComradeKev)
+
+* Fix test cases for LHTR rules revisions below (ComradeKev)
+
+* Fix bug 2905542 LHTR HB not adding +1 to SBR rolls (ComradeKev)
+
+* Fix bug 2908897 occupiedTerrOf not working when liberating allied capital (ComradeKev)
+
+* fix null pointer in move with Twilight Imperium (sgb)
+
+* Create/use Properties for various entries in Constants for consistency (ComradeKev)
+
+* Fix invalid property used in isTransportUnloadRestricted of TransportTracker (ComradeKev)
+
+* Fix bug 2907042 Revised submerged subs don't fight in subsequent defending battles (ComradeKev) 
+
+* increase download map panel size (sgb)
+
+* if a url in the download games xml starts with !, ignore it and disable download button.  this allows better formatting  (sgb)
+
+* game engine prevents ai from repairing a territory more than the number of times it was hit (sgb)
+
+* fix bug 2899005, Long air range icon works only with "fighter" and "bomber" (sgb)
+
+* fix bug 2905298, Wrong message Cant place sea unit on land (sgb)
+
+* fix bug 2905986, occupiedTerrOf don't work with capital (sgb)
+
+* skins can be downloaded/read from the users map folder (sgb)
+
+Changes for 1.1.1
+
+* new neutral flag images (Veqryn)
+
+* allow users the option to replace downloaded maps when downloading (sgb)
+
+* don't allow downloading a map with the same name as one that comes with the default TripleA install (sgb)
+
+* fix bug 2893890, fighters with no movement left can hover in sea zones where carriers can be placed (sgb)
+
+* fix bug 2887488, Add "Display Sea Names" property to display sea zone names (ComradeKev)
+ 
+* Add 'Multiple AA Per Territory' property (ComradeKev)
+ 
+* Fix nonCombat movement into enemy SZ 2 zones away (ComradeKev)
+
+* Remove Economic Victory from NWO, Great War, and Big World (ComradeKev)
+
+* Add French Rocket to NWO units (ComradeKev)
+
+* Fix WW2V3_Tech_Model constant (ComradeKev)
+
+* Fix buyCruiserIndustrialTechnology unit for Big_World (ComradeKev)
+
+* Various map utility fixes (Stephen Wicklund)
+
+* Right clicking on center picker removes the dot (Stephen Wicklund)
+
+* Center picker displays the name of the center next to the dot (Stephen Wicklund)
+
+* Fix bug in getStrengthOfPotentialAttackers for planes. Reduced frequency of tech purchase. (Kevin Moore)
+
+* fix bug 2831083, WW2V3: Retreat from undefended transports (sgb)
+
+* fix bug 2892836, aa radar in low luck (sgb)
+
+* fix bug 2893144, null pointer on startup (sgb)
+
+* fix bug 2898135, where unloaded infantry could move as mechanized infantry (sgb)
+
+* various paratrooper fixes (sgb)
+
+* fix bug 2892469, paratroops in first enemy territory (sgb)
+
+* StrongAi, Cleaned out unused code. Minor tweak to getStrengthOfPotentialAttackers. (Kevin Moore)
+
+* Fix bug in zip url parsing (Stephen Gallagher)
+
+* StrongAi, Fix bug in ship movement. Modify territory selection for non-combat transports (Kevin Moore)
+
+* fix bug where paratroops could walk on water, bug 2867358 (sgb)
+
+* remove isParatroop UnitAttachmant property. (sgb) 
+
+* fix Allied fighter on AC bug, bug 2890919 (sgb)
+
+* fix infinite loop in odds calculator, bug  2853353 (sgb)
+
+* better logic for determining which odds calculator player should be used if no units are in the territory (sgb)
+
+* better isolation of units in odd calculator from units in the game (bug 2820761) (sgb)
+
+* download file notes shows top of notes by default now, rather than scrolling to the middle (sgb)
+
+Changes for 1.1.0
+
+* update StrongAI files for PUs (ComradeKev)
+
+* update to substance 5.3 (sgb)
+
+* remove troublesome maps (sgb)
+
+* Add code to allow downloading and installing games from the network.  An Exampe site is here, 
+  http://sites.google.com/site/tripleadownloadexamples/    (sgb)
+
+* add utility for updating game.xml files (sgb)
+
+* Strong AI Changes  (Kevin Moore)
+  -Handles Neutrals correctly.
+  -Switched all decision making to a territory ranking system which is consistent throughout the AI
+  -Eliminated expectations that movement will be under revised/AA50 limits.
+  -Cleaned up handling of units around a threatened capital
+  -Improved blitzing and transport invading
+
+
+* Scrub Production Units (PUs)(ComradeKev)
+
+* Fix bug 2827014 Air forces route through impassables if length = valid sea route (ComradeKev)
+
+* Fix bug 2829876 BB bombards when only air attacking from SZ (ComradeKev)
+
+* Fix bug 2827394 renamed Neutral.GIF to Neutral.gif (ComradeKev)
+
+* Fix  bug 2820547 faulty mechanized inf and paratroop capacity (ComradeKev)
+
+* Scrub xml and source (ComradeKev)
+
+* fix bug 2818614 include substance jar in build.xml (Seidelin)
+
+* fix bug 2818578 partial amphib attack with air asked to retreat twice (Seidelin) 
+
+* fix bug 2820382 Undoing/redoing amphibious attack can allow too many bombard (Seidelin)
+
+* Don't allow aa guns in blitzed territories to fire rockets (sgb)
+
+* Improved land and sea unit purchasing. Changed parameters on factory purchase. Extensively modified ship handling in combat and non-combat. Modified battle prediction to improve land unit attack. (Kevin Moore)
+
+* fix bug 2818023 again moving unit to carried-over battle causes existing units to be ignored (ComradeKev)
+
+* new flag images for Italy and Russia (U-Boat)
+
+* fix partially repaired factories showing as completely repaired (ComradeKev)
+
+* Changed testCanRetreatIntoBlitzedTerritory() to allow retreat into blitzed territory (ComradeKev)
+
+* fix bugs 2815448 defending subs not getting sneak attack (Seidelin) 
+
+* fix bug 2813511 naval units not asked to retreat (Seidelin)
+
+* fix bug 2807885 fighters asked which transport to load (Seidelin)
+
+* Partial refactor of validateAirCanLand (ComradeKev)
+
+* add isInfantry marker to infantry units for all mods (sgb)
+
+* fix bug where strat bombers hit by aa en route to a battle lives (sgb)
+
+* fix bug 2816632 Marine unit doesn't work with LL (sgb)
+
+* fix bug 1888062 multinational transport bug (sgb)
+
+* remove non working "Use Destroyers and Artillery" in Iron Blitz (sgb)
+
+* fix bug 2815448, Defending subs don't get sneak defense (sgb)
+
+* fix bug 2803021, NWO PUs to spend don't display (sgb)
+
+* move copies of blank_relief to images/relief tiles, this allows all maps to share a copy (sgb)
+
+* change labels/dialog on repair screen to make it clear we are not purchasing units (sgb)
+
+* fix bug 2802962, bug where units loaded onto transports in a pending battle zone do not die when their transports do (sgb)
+
+* fix bug 2807875, Factories count towards production limit (sgb)
+
+* fix bug 2815801 Bid placement Error (sgb)
+
+* Complete gutting of NonCombatMoveSea; Removed most plane analysis code and replaced with calls to invitePlaneAttack in SUtils; 
+  tweak to purchasing when resources are high to help with other maps; 
+  prepared code for purchasing units for the best transport attack (Kevin Moore)
+
+* Add some missing units for NWO and activate tech for extra 4 players in NWO-9 (ComradeKev)
+
+* Check if SBR damages unit production before displaying factory damage (ComradeKev)
+
+* Fix bug 2801738 just use Infantry instead of chineseInfantry so they stack properly (ComradeKev)
+
+* Add victory conditions to game notes (ComradeKev)
+
+* Add NOs to game notes for AA50 (ComradeKev)
+
+* Fix bug 2807397 Revise NWO 9 Player placements for E/W Romania (ComradeKev)
+
+* Fix number of paratroops shown loading on to bomber (ComradeKev)
+
+* Change default route finding to try land routes first (ComradeKev)
+
+* Fix allMatch and someMatch returning true on empty collections (ComradeKev)
+
+* Add victory conditions to game notes (ComradeKev)
+
+* Enable turning on/off relief tiles on AA50 (ComradeKev)
+
+* Add Relief Tiles for AA50 (Much thanks to Imperious Leader)
+
+* Fix bug 281534 fighter movement calculation (ComradeKev)
+
+* Moved capitol markers to better fit with AA50 reliefs (BraveHamster)
+
+* Fix bug 2810759 Non-amphib units taken as casualties before amphib units (Seidelin)
+
+* Fix bug 2807878 Planes attacking w/ amphib units can't retreat (Seidelin)
+
+* Strong AI fix bid purchasing and put in code for blitzing empty territories (Kevin Moore)
+
+* show line/column of xml errors when a game fails to parse (sgb)
+
+* Modify AI: Apply purchasing changes to sea units (Kevin Moore)
+
+* Show user ip/port lobby server tries to connect to when hosting a game fails because the computer is not reachable from the lobby server (sgb)
+
+* Modified AI: purchasing for seaLion, improved blitzing, tweaked combat and non-combat to better protect capitals and factories, add comments in SUtils (Kevin Moore)
+
+* fix bug 2808834 online games suddenly fail (sgb)
+
+* fix bug 2806095, missing files in mac build (sgb)
+
+* Add some test cases
+
+* Fix bug 2459410 Fighters on carriers with allied fighters can't attack (ComradeKev)
+
+* Fix bug 2807115 Air improperly calculating max distance with existing carriers (ComradeKev)
+
+* Fix exceptions when undoing a paratroop attack move (ComradeKev)
+
+* Fix aircraft being able to fly too far when building carriers (ComradeKev)
+
+* Fix bug 2806723 ships allowed to move through enemy navies during combat move (ComradeKev)
+
+* Fixed stopping in zone with ignored units causes movement to end (ComradeKev)
+
+* Added AA50 Technology Tree to game notes (ComradeKev)
+
+* Check defending units for attack power before popping kamikaze message (ComradeKev)
+
+* Add method to land paratroops (remove dependence on bombers) (ComradeKev)
+
+* Fix 1 AA hit kills all paratroops (ComradeKev)
+
+* Fix paratroops refusing to fight (ComradeKev)
+
+Changes for 1.0.3.4
+
+* Better internet ip detection (sgb)
+
+* Fix bug where a territory could not be strategic bombed and conquered in the same turn (sgb)
+
+* Fix bug 2804677 Retreating into enemy spaces (sgb)
+
+* Add menu to change look and feel (sgb)
+
+* Fix bug 2799810  Admin right-click menu (sgb)
+
+* Fig bug 2801742 Rockets throw error in NWO (sgb)
+
+* Fix bug 2801740 java error in every roll in a PBEM game. (sgb)
+
+* Fixed not being able to place bid units at non-factories (ComradeKev)
+
+* Fix bug 2675636 Crash when ignoring enemy units (ComradeKev)
+
+* Fix bug 2779955 Cause battle when new/ignored units are in contested zones (ComradeKev)
+
+* Minor change to the Strong AI calculation of the strength of sea units near a territory (Kevin Moore)
+
+* Fixed the connections or E/W Romania in NWO9 (ComradeKev)
+
+* Added name_place.txt for NWO (ComradeKev)
+
+* Updated rockets.png for Russians in NWO (ComradeKev)
+
+* Fixed some connections in Europe.xml (ComradeKev)
+
+* Added name_place.txt for Europe (ComradeKev)
+
+* Fixed neutrals not able to be captured after a failed attempt (ComradeKev)
+
+Changes for 1.0.3.3
+
+* put game name in window title (sgb)
+
+* fix bug 2753571 - Unloaded cargo not being removed when transport sinks, also odds calculator fails with transports in revised (sgb,  gruetzdark)
+
+* fix bug 2779959 - Stay in the Mobilization Zone (sgb)
+
+* fail when loading game where xml case and file name case differs (sgb)
+
+* fix map name/unit case in nwo maps (sgb)
+
+* mark territories with battles (sgb)
+
+* Make it so map utility programs can find the centers, polygons, and map.properties files by using the
+  path of the map's image file. (Stephen Wicklund)
+  
+* Make it so the user can specify the unit's scale when using the 'Auto Placement Finder' utility.(Stephen Wicklund)
+
+* add a setting to "Lock" the map, so you can observe a game without the map moving all around (Stephen Wicklund)
+
+* add  a setting to suppress the showing of battles between two AIs (Stephen Wicklund)
+
+* add a setting to choose how long the AI pauses between each movement (Stephen Wicklund)
+
+* add a better ai (Kevin Moore)
+
+* limit number of units in one row of production panel to 8 (sgb)
+
+*  The following list of bugs were fixed- (Comradekev)
+	Fix the engine forcing the repair of at least 1 damage
+	Amphib units taken as first casualties if partial retreat is possible
+	Fix subs blocking naval bombardment
+	Fix paratroop code (die with AA casualties, retreats, non-dependent in regular combat)
+	Fix AARadar not inflicting casualties on aircraft
+	Fix disappearing fighters on combined US/China turn
+	Fix factories with PU value <3 shouldn't get Increased Production bonus
+	Fix warships allowed to battle subs/trns, then move in noncombat movement
+	Fix error generation when placing IC, undoing it, then trying to re-place it
+	Fix error generation when trying to place both new fighter and CV in sea zone
+	Fix Null Pointer when trying to edit a sea zone owner
+	Fix US being able to place an IC in a newly captured territory 
+	Fix NWO territories Romania, Czech., Normandy, and Le Harve.
+	Multi-player transport fleets throw - 'wrong number of casualties selected' error
+	Ask if BB/CR should bombard
+	Add ability to ignore defending Trns
+	Fix NWO map names
+	Add damage totals to factory icons (black text)
+	US units that move into enemy occupied SZ in non-combat (trn/sub) fight during Chinese combat
+	Fix null pointer when loading maps with 'Show Map Blends' selected on the View menu
+
+Changes for 1.0.3.2
+
+*  The following list of bugs were fixed- (Comradekev unless otherwise specified)
+	Darkened/moved Italian flag (Seidelin)	
+	Tech tokens not removed from client after successful roll (Seidelin)
+	Factories not repaired on Client
+	Not charged for tech rolls 
+	Out of Bounds exception thrown when trying to save games (all games)
+	Fix Null Pointer when selecting 'do not attack' subs
+	Transports with cargo blocking movement
+	Can't build new fighters on old carriers
+	Defending carrier with fighters aboard- fighters don't return fire in 1st combat round
+	Defending subs should be able to return sneak attack fire
+	Transports killed after subs submerge
+	Transports/subs causing Itialian NO to not be met
+	Repairing multiple factories is buggy
+	Defending fighters should be allowed 1 move if their CV dies
+	US/China combined turn
+	
+Added New World Order 5 and 9 player games (Sieg)
+	Added relief map and blending support to NWO map (ComradeKev)
+
+Changes for 1.0.3.1
+
+* update docs to correct how to run TripleA from the command line using the ant run command.
+
+* The following list of bugs were fixed- (Comradekev)
+	Move Chinese capital to impassable neutral so any time a Chinese terr is liberated, it goes to China
+	Some dialogs not appearing on Client computers
+	Paratroops should be able to overfly blitzed territories
+	Factory repair charges not being applied
+	Use allied AA in a territory if they have Radar
+	Limit max damage from rocket attacks
+	Fix the UK nat'l objective
+	Technology throws exceptions 
+	Add useTech option for all games
+	Allow new AA to be placed if there's already one in the terr
+	Fix null pointers when transporting units
+	Allow partial retreat for a combined amphibious assault
+	Defending subs should be able to return fire befor applying sneak attack casualties
+	Pathfinding uses impassables
+	Allow loading of Trns in SZ with enemy subs
+	Consider carrier route (can't go on land) when attempting to find landing spots for fighters
+	Add ability to pre-set techs 
+	Remove SBR raid from blitzed territory
+	Allow amphib assault w/o having to combat sub-only forces
+	Fix bomber -v bomber comes to stalemate after one round of combat
+	Fix defending subs still firing after submerging
+	SBR throws null pointer in edit mode
+	Hosted games show more hits than units when transports present
+	Hosted games throw exceptions when undoing transport moves
+	Fix air not firing at subs when accompanying DD dies 
+	Fix client game factories not repaired
+	Disallow blitzing through AA and factories
+	Fix low luck AA not inflicting damage
+	Fix 'Attack Subs' dialog only showing up on Host
+	Fix surface ships being allowed to move into enemy SZ during non-combat
+	Add option to continue after victory for all games
+	Fix exception on host when getting technology
+	Fix partial retreat from amphib assault not working
+	Should be able to stop in SZ with a trn/sub, then continue trip
+	Add dialog to disallow file names with slashes
+	
+* Fix for tech tokens (Seidelin)
+	
+* Add ShowMapOnly mode for passively viewing games (Smutt) 
+
+* Added 'Neutrals Are Impassable' property to eliminate neutrals from pathfinding (ComradeKev)
+
+* on windows, put saved games in users home folder, rather than the triplea install directory.  this works better on Vista. (sgb)
+
+* fix [ 1945380 ] battle calculator window buttons lost (sgb)
+
+* update launch4j generated exes to use launch4j 3.0.1 (sgb)
+
+* updated embedded jre to 6_11 (sgb)
+
+Changes for 1.0.3.0
+
+* Disable game properties button if there are no game properties (Chris McIntosh)
+
+* Fix spelling in classic xml (Chris McIntosh)
+
+* The following list of bugs were fixed- (Comradekev)
+	#2554414 Only one Mechanized Infantry per tank should be allowed
+	#2554418 Jet Fighters not attacking at 4
+	Games throw exceptions when trying to affect Tech Tokens
+	Chinese unit max for territory placement not limited to Chinese-only units
+	Territory Turn Limit removed from options
+	Option added for inclusion of Tech development
+	China should be able to place units on newly captured territories
+	Added Japanese Inf in Solomon Islands (aa-42)
+	Fix null pointer when choosing NOT to attack subs
+	Paratroops should be limited to 1 per bomber
+	Bombers should not be able to move before picking up paratroops
+	Radar/damaged factory icons not displaying
+	Fix factory repair cost for Increased Factory Production technology
+	#2474056 Captured AA ownership
+	#2554411 Rockets allowed to overfly impassables
+	#2554412 Rockets firing after Non-Combat move 
+	#2554419 Factory repair costs with Enhanced Production technology
+	Factories added with edit mode are damaged
+	Should allow more than 1 AA in a territory for some games
+	Should be able to place in enemy occupied sea zones
+	Added stalemate condition for trn -v trn battles
+	Low-Luck AA support for RADAR tech
+	Mechanized Inf should be able to blitz
+	AA hits separated for combined fighter/bomber groups
+	
+* 2006022 Undo movement jumps back to top of list (Chris McIntosh)
+
+* 1910223 Ability to cancel odds calculator (Chris McIntosh)
+	
+Changes for 1.0.2.0
+
+* Maps images, and XML for AA50 (Zero Pilot and Black Elk)
+
+* Update game notes (sgb)
+
+* Better error message if no server properties for this version (sgb)
+
+* Mods can now be installed without unzipping anything.  Simply create a zip file with contents that look like any of the folder in maps. (sgb) 
+
+* Add new Game chooser dialog that shows games notes. (sgb)
+
+* Move xml files from games folder to /maps/<mapName>/games.  For example, revised.xml is now in maps/revised/games (sgb)
+
+* Add chat ignore feature, thanks to Tango for the icon - http://tango.freedesktop.org/Tango_Icon_Library (sgb)
+
+* Add full TripleA 50 support (ComradeKev)
+    MUCH thanks to Seidelin for playtesting!
+
+* Add Choose AA Casualties property (value=true) to Revised.xml (President Douchebag)
+
+* Break up rulesets into individual rules (while keeping overall ruleset setting) (ComradeKev)
+
+Changes for 1.0.1.4
+
+* Add blank_relief.png to various maps to fix exceptions and fix misspellings in POS *.txt files (ComradeKev)
+
+* Fix bug [ 2153973 ] BattleCalc during EDIT hangs the game (ComradeKev)
+
+* Fix bug [ 1228661 ] Fighters can't move to combat unless carrier moves in range (ComradeKev)
+
+* Fix bug [ 1951595 ] edit mode, fgt and inf placement in sz (ComradeKev)
+
+* Tweak blending code to account for missing base/relief tiles (ComradeKev)
+	Map makers need to include a blank_relief.png file, nothing extra is required for base tiles.
+
+Changes for 1.0.1.3
+
+* When executing sql in headless lobby, show error messages on the console (sgb)
+
+* Update Great War map to remove small country markers (Jason Clark)
+
+* Add Revised relief tiles (Zero Pilot)
+
+* Update Revised colors (President Douchebag)
+
+* Set max memory for mac release (sgb)
+
+* Fix abend when there are no original owners in a territory (ComradeKev)
+
+* Change so only original owner gets the faded kamikazi zone marker (ComradeKev)
+
+* Fix display of Convoy Route text (ComradeKev)
+
+* Fix PlacementPicker abends (ComradeKev)
+
+* Fix Null Pointer [ 1068223 ] for non-required files in AutoPlacementFinder app (ComradeKev)
+
+* Fix bug [ 1937303 ] casualty window shows all casualties as defending nation (ComradeKev)
+
+* Fix bug [ 2066114 ] Industrial Tech advancement crashes stats tab (President Douchebag)
+
+* Add code to identify offending territory in AutoPlacementFinder exceptions for centers.txt (ComradeKev)
+
+* Add code to allow Relief Map Blending (Overlay, Linear_Light, Multiply, Difference) via map.properties settings includes 3 parameters (ComradeKev) 
+	map.mapBlends=true
+	map.mapBlendMode=Linear_Light
+	map.mapBlendAlpha=0.5f
+	
+Changes for 1.0.1.2
+* Fix territory connections in Pacific
+
+* Fix bug where hasLandRouteToEnemyOwnedCapitol causes abend for players with no Capital.  Returns none for 'optional' players
+
+* Re-create code to change ownership of units so British/Australians can play on same turn in pacific
+
+* Fix thrown exception with neutral blitz/flyover. (Comradekev)
+
+* Fix bug [ 2005292 ] LHTR planes not able to land on produced carriers. (ComradeKev)
+
+* Add ability to manually select AA casualties via "Choose AA Casualties" game property. (President Douchebag)
+  
+* Fix bugs [ 1668008 & 1683940 ] Fighter ability to move one space to land when CV is sunk (ComradeKev)
+
+* Fix territory connections in Pacific (ComradeKev)
+
+* Fix bug [ 1809209 ] transport retreat/die after unload leaves unloaded units in place (ComradeKev)
+
+* Change BattleStepStrings names to match text for clarity (ComradeKev)
+
+* fix null pointer that leads to potential lobby crash (sgb)
+
+* update great war map (Jason Clark)
+
+Changes for 1.0.1.1
+
+* Replace code for using the Large flags for Capital markers and tweak their placements in Pacific (ComradeKev)
+
+* Fix abend when capturing Commonwealth Convoy Center (player with no capital) (ComradeKev)
+
+* allow lobby server to run in headless mode  (sgb)
+
+* fix lobby.properties. If a lobby.properties file is in the root TripleA directory, use that to connect to the lobby (sgb)
+
+* reduce lobby backup frequency to 7 days (sgb) 
+
+Changes for 1.0.1.0
+
+* Fix bug [ 1830015 ] transport load/unload after being in combat (ComradeKev)
+
+* Add Convoy Centers & Convoy Routes, as well as labels (ComradeKev)
+
+* Add Tokyo Express - Ability for DDs to carry one inf in Pacific (ComradeKev)
+
+* Fix amphib marines combat display  (ComradeKev)
+
+* Add name_place.txt for pacific to clean up territory name placement (ComradeKev)
+
+* Add Australian player purchases (units transferred to British control for combined play after buy) (ComradeKev)
+
+* Add Australian capital and territories (ComradeKev)
+
+* Add partial support for Commonwealth Convoy Center cash distribution (ComradeKev)
+
+* Add Naval and Air bases (ComradeKev)
+
+* Add partial support for Kamikazi zones (ComradeKev)
+
+* Fix lhtr strategic bombing (dav eagle2)
+
+* fix [ 2015235 ] Compilation error under OpenJDK (karrde712)
+
+Changes for 1.0.0.3
+
+* allow factories with non 0 movement to move (sgb)
+
+* update great war to 2.2 (Jason Clark)
+
+Changes for 1.0.0.2
+
+* Fix dice click problem, reopen bug [ 1673719 ]  right-click-drag should not deselect unit upon release (sgb)
+
+* Fix bug where selecting unit and transports and moving to a sea zone may move a transported unit more than once (sgb)
+
+* Fix bug  [1988219] lhtr fighters cant land on new carriers (sgb)
+
+Changes for 1.0
+
+* add tdice dice servers (sgb)
+
+* lock warnings don't show error dialog (sgb)
+
+* fix bug [ 1962058 ] fighter move in non combat (sgb)
+
+* allow selection of text on chat panel (sgb)
+
+* remove non existent irony dice server (sgb)
+
+Changes for 0.9.4.2
+
+* in edit mode, don't always ask the user to choose the units to remove (sgb)
+
+* add game id, to be used in future pbem server (sgb)
+
+* remove uneeded base tiles, this fixes the white space near algeria (sgb)
+
+Changes for 0.9.4.1
+
+* fix bad anti aliasing effects when scaled at 100% (sgb)
+
+* increase max heap size to 196M (sgb)
+
+Changes for 0.9.4
+
+* simplify right click map dragging (sgb)
+
+* reorganize menus slightly, add export menu (sgb)
+
+* turn antialiasing on for map drawing, makes scaling look better on windows (sgb)
+
+* fix spelling mistakes in revised (zero pilot)
+
+* updated revized map (zero pilot)
+
+* fix bug 1890628 freeze in triplea 0.9.3 (sgb)
+
+* fix bug 1905413 can't move units with a warning (sgb)
+
+* fix bid (all bid PUs were being added to the player) (sgb)
+
+* In europe incomplete, changed the transport cost of artilery to 2, so 2 may be transported (comradekev)
+
+* fixed bug[ 1896778 ] In Pacific game cannot move between sea zone 37 and Kiangsi (comradekev)
+
+* fixed bug [ 1910221 ] Undone Movement Null Pointer (sgb)
+
+* update great war to version 2.0 (Jason Clark)
+
+* fix highlight unit drawing bug (sgb)
+
+* fix null pointer when ai plays in capture the flag (sgb)
+
+* improved game notes button (sgb)
+
+* fix null pointer when attacking neutral countries (sgb)
+
+* add ant run command for running from command line (sgb)
+
+Changes for 0.9.3
+
+* fix [ 1870424 ] can't leave tic tac toe game after the game is over, also fix tic tac toe networked mode (sgb)
+
+* disable main button on startup screen, as it overrides send message send (sgb)
+
+* more PBEM posting fixes (tclayton)
+
+* re-add screenshot overlay settings to map.properties in revised (tclayton)
+
+* fix bug [ 1860285 ] solutions chooser offers no solutions (tclayton)
+
+* fix bug [ 1851498 ] id should not be required in pbem games (tclayton)
+
+* fix bug [ 1668015 ] disallow neutral territories in route in revised (tclayton)
+
+* fix bug [ 1878700 ] edit mode: remove unit bug (tclayton)
+
+* fix bug [ 1875092 ] Missing "No place for unit to land" warning (tclayton)
+
+* fix bug [ 1862922 ] foreign planes on carrier (tclayton)
+
+* fix [ 1867299 ] Initial industrial complexes have limited production (comradekev)
+
+* fix bug [ 1746101 ] defending units in pacific show incorrectly in battle display (comradekev)
+
+* change Load new game to Choose Game on startup screen. (sgb)
+
+* fix bug [ 1855420 ] Unable to move fighters during non-combat movement (tclayton)
+
+* fix bug [ 1856374 ] movement panel crash (tclayton)
+
+* put engine version in system properties for debugging (sgb)
+
+* mark kamikaze moves as such in the history (sgb)
+
+* fix bug [ 1856656 ] IllegalState exception (sgb)
+
+* disable chat time menu in non networked games (sgb)
+
+* add limited chat flood control (sgb)
+
+* [ 1837246 ] deploy troops phase window behavior (sgb)
+
+* fix bug [ 1855427 ] submerged subs prevent air units from moving (sgb)
+
+* add japanese, british, russions rockets, australian, canadian, neutral puppet state marine and neutral cruiser unit images (zero pilot)
+
+* use rocket images when a player has rocket tech advance (sgb)
+
+Changes for 0.9.2
+
+* fix bug where if your capital fell, and you captured another players capital, you could buy units (sgb)
+
+* PBEM posting fixes and cleanup (tclayton)
+*   don't proxy PBEMMessagePoster, remove serialization (was broken in multi-player)
+*   fix EndTurnDelegate serialization
+*   only show Turn Summary Posting widgets if posting is enabled
+
+* fix bug [ 1825831 ] in multiplayer mode, all players can edit (tclayton)
+
+* fix bug [ 1825841 ] comment mode split bar visible (tclayton)
+
+* WeakAi improvements (masch)
+*   fix in land route calculation (does not take neutrals into account)
+*   improvement in Non-combat move. Moves towards enemy territories even if there are no units.
+*   purchase 20% transports if player is amphibious. Can boost that - buy
+*   only transports if landing point is heavy armed e.g. UK or Japan
+*   Try to capture unprotected land in amphibious combat ( 1 transport on different route )
+*   Ignore channel feature for sea routes, if endpoint is on channel territory ( otherwise you cannot attack that)
+
+* patch [ 1827892 ] Fix NPE crash when loading PBEM game (rrowell)
+
+* for installer with java, update embeded jre to 1.6 (sgb)
+
+* fix bug [ 1823400 ] Filename typo causes Exception to be thrown (sgb)
+
+* fix bug [ 1825576 ] Missing entry in four_if_by_sea.xml (sgb)
+
+* fix bug [ 1767304 ] Great War v.1.5 sz67 to sz57 bug (sgb)
+
+* fix bug [ 1563219 ] Possible to buy more units than can be placed  (sgb)
+
+* fix bug [ 1535135 ] loading save game bug (sgb)
+
+* fix bug [ 1718350 ] AA guns on LL fire once (sgb)
+
+* upgrade to looks 2.1.4 (sgb)
+
+* partial fix for bug [ 1750148 ] Transport error unloading to enemy territory from hostile water (sgb)
+
+* fix bug [ 1753871 ] SaveGameFileChooser bug (sgb)
+
+* fix bug [ 1692668 ] AI UK loads US troops on UK turn (sgb)
+
+* new Territory/Production summary options for Turn Summary (tclayton)
+
+* fix game xml files and PlayerList class to preserve proper player ordering (tclayton)
+
+* new Comment Log feature for adding comments/trash talk to game history (tclayton)
+
+* new PBEM Turn Summary posting feature (tclayton)
+
+* new "Edit Mode" feature (tclayton)
+
+* add PersistentDelegate support and IDelegateHistoryWriter interface to engine (tclayton)
+
+* new UnitAutoChooser feature (tclayton)
+*   create UnitAutoChooser class to translate chosen categories into possible unit solutions
+*   update MovePanel to use UnitAutoChooser for unit selection and route planning
+*   update UnitChooser to support UnitAutoChooser and solution browsing
+*   fix existing UnitChooser arrow icons and add left/right icons for solution browsing
+
+* MoveDelegate cleanup (tclayton)
+*   move all validation methods to MoveValidator so they can be called on client side
+*   make helper functions in MoveDelegate static, so they can be called on client side
+*   fix a few spelling mistakes in symbol names
+
+* partial fix for bug [ 1742775 ] Operating system freeze on Windows 98 with Ati Graphics Card (sgb)
+
+* Added support for "color" property, including color picker UI (dowobeha)
+
+Changes for 0.9.1
+
+* implemented minimax AI and alpha-beta AI; currently used in Tic Tac Toe and King's Table (dowobeha)
+
+* implemented new King's Table game and Tic Tac Toe game (dowobeha)
+
+* created common code package to minimize code duplication between different games (dowobeha)
+
+* enhanced game framework to allow easier implementation of new grid-based games (dowobeha)
+
+* show time in chat panel, default is to show chat time in lobby, but not in game (gansito)
+
+* bug fixes (tclayton):
+*  [ 1204024 ] Missing Sea Zone 
+*  [ 1510049 ] unloading troops bug
+*  [ 1640658 ] fighters in classic attacking on friendly carrier
+*  [ 1641051 ] Transport Unloading Bug
+*  [ 1652870 ] each phase should begin with focus on tabs panel
+*  [ 1655181 ] clean up history log entries
+*  [ 1659713 ] Java Exception
+*  [ 1661095 ] MovePanel should dynamically select best units for route
+*  [ 1662464 ] null pointer exception when skipping move phase
+*  [ 1662938 ] shadow units don't appear in map overlap sections
+*  [ 1671750 ] improve logic for transport load order
+*  [ 1672743 ] exceptions thrown by delegates get mangled by proxy
+*  [ 1696749 ] Unload problem from allied transport after undo
+*  [ 1753866 ] load and unload should have default selections
+
+* feature [ 1749993 ] new "History Log" feature (tclayton)
+
+* feature [ 1746894 ] Save Screenshot feature (tclayton)
+
+* feature [ 1673208 ] show move validation warnings/errors when moving mouse (tclayton)
+
+* feature [ 1661088 ] code cleanup - implement MovePanel getMovableMatch() method (tclayton)
+
+* new revised map (zero  pilot)
+
+* in revised, remove connection between 25 Sea Zone and 43 Sea Zone (zero pilot)
+
+* new vc image (zero pilot)
+
+* japanese tanks defend at 2 in pacific (comradekev)
+
+* non jopanese units defend at 1 in first round of pacific (comradekev)
+
+* fix empty sea zone in gulf of mexico in classic,battleship_row,four_if_by_sea,and iron_blitz (Scarbrow)
+
+* four if by sea turn order changed (Scarbrow, rodthegod)
+
+* add attack/defense/movement to production panel (gansito)
+
+* move test classes to test directory (sgb)
+
+* add export game setup charts menu (gansito)
+
+* show battle casualties in battle display (ahmet)
+
+* mark remote players as remote (ahmet)
+
+* allow multiple canals per sea zone (tekkyy)
+
+* allow centering map on battles (ahmet)
+
+* alt mouse scroll zooms the map in and out (ahmet)
+
+* new unit images (lssah)
+
+* add moderator functions, moderators can boot players, change passwords, and ban ip addresses (sgb)
+
+* better logic for determining attacker defender in odds calculator (Gansito)
+
+* add uninstaller (Gansito)
+
+* allow odds calculator to specify simulation count (Gansito)
+
+* banned ips and banned words are stored in lobby database (sgb)
+
+* the lobby server can now ban ip address (sgb)
+
+* add serialversionuid's to several classes (dagon)
+
+* add unit icon to unit images on the territory tab (dagon)
+
+* add menu to show/hide units (Gansito)
+
+* lobby game table doesn't loose selection when games are added/removed or updated (sgb)
+
+* better route finding logic (sgb)
+
+* added six nation free for all mod for revised map (the_devil_inside)
+
+* fix bug [ 1655283 ] Java 6 reserves java.awt.Window method getWindows() (sgb)
+
+* update to great war 1.3 (Jason Clark)
+
+* add canals to Great War and Big World (Black Elk)
+
+Changes for 0.9.0.2
+
+* fix bug [ 1640596 ] 0.9.0.1 Revised Map Wrap Issue (sgb)
+
+* Fix bug where dissapearing networks players would not be removed from the game (sgb)
+
+* allow lobby server to ping clients to ensure the are still there (sgb)
+
+Changes for 0.9.0.1
+
+* Adjusted British starting units (Jason Clark)
+
+* fixed infantry defense in Classic (sgb)
+
+Changes for 0.9
+
+* improve great war map (Jason Clark)
+
+* improve great war african markers (Jason Clark)
+
+* fixed orientation of french zeppelin in great war (Jason Clark)
+
+* In great war, the US now has a starting transport, 1 inf and 1 cav.  1 us cruiser removed. (Jason Clark)
+
+* In great war, removed connection between Tanga and Weidmannshiel. (Jason Clark)
+
+* focus on action button when battle window is activated (sgb)
+
+* lobby server checks client's computer is network accessble when client hosts a game (sgb)
+
+* fix [ 1611289 ] map scrolling bug (sgb)
+
+* client only waits 10 seconds for connection to servr to be made before aborting (sgb)
+
+Changes for 0.8.6
+
+* fix infantry in classic (sgb)
+
+* make convoy zones stand out better (sgb)
+
+* read output of exec'd lobby games (sgb)
+
+* Saved games in user.home/triplea (not .triplea) for linux and user.home/Documents/triplea for mac (sgb)
+
+* better logic for finding local ip address (sgb)
+
+* fix loby where clients could not find real server address (sgb)
+
+Changes for 0.8.5
+
+* allow neutrals to have different unit types (sgb)
+
+* fix bugs where all bombers in lhtr defend at 2 (sgb)
+
+* update big world map (surtur2)
+
+* alt click/unclick selects 1/10 the type (Nate)
+
+* allow weak ai to move into empty nuetral territories (Nate)
+
+* make dialog clearer for planes can't land (sgb)
+
+* handle marti dice server error messages (sgb,clausewitz)
+
+* allow setting of lobby server lookup url in a file called lobby.properties with a key server in the root triplea directory (sgb)
+
+* fix max select when more than one type of unit present (sgb)
+
+* fix some click to continue to press sapce to continue (sgb)
+
+Changes for 0.8.4
+
+* change click to continue text to press space to continue on battle screens (sgb)
+
+* add an option in battle calculator that at least 1 attacking land unit must survive (sgb)
+
+* fix transport capactity in europe, add connection between adriatic and central med, make saudia arabia nuetral (sgb)
+
+* change network to use nio (sgb)
+
+* fix bug where units originally in a sea zone with a submerged sub that is attacked by another unit cant leave the sea zone (sgb)
+
+* show battle calculator on current territory when pressing ctrl B (sgb)
+
+* ctrl+ and ctrl - zoom in and out (sgb)
+
+* mark lhtr as complete. low luck rules for heavy bombers still need to be added for all versions (sgb)
+
+* allow fighters to hover in sea zone where carriers can be produced under them for lhtr (sgb)
+
+* move dice server config into properties file (sgb)
+
+* allow controlling of name placements using name_place.txt (sgb)
+
+* fix sea zone boundaries when map is scaled (sgb)
+
+* add great_war mode (surtur2 and Triplelk)
+
+* update triplea_linux.sh (Daniel Roethlisberger)
+
+* show messages when people join/leave chat (sgb)
+
+* fix scroll bug where map would jump when mouse scrolled in non wrappable maps (sgb)
+
+* make convoy zones more transparent (sgb)
+
+* fix neutral fighting bug (sgb)
+
+* fix spelling mstakes in classic map (sgb, RogerCooper)
+
+* add max button to place dialog where number of units that can be placed is limited (sgb)
+
+* fix bug [ 1563239 ] Bad scroll increment for scrollbars (sgb)
+
+* fix bug  [ 1563227 ] Continue button does not show up (sgb)
+
+Changes for 0.8.3
+
+* make odds calculator use MustFightBattle, update ui (sgb)
+
+* allow scaling of auto placement finder.  On the command line, type the scale after the command, 
+eg "java -classpath triplea.jar util/image/AutoPlacementFinder 0.5" (sgb)
+
+* add map decoration images.  create a file called decorations.txt in the map directory.  The format is the same as place.txt, with an image name, then list of points where
+the image should be drawn (multiple points are fine).  The image name should be the name of a file in the misc image folder (the same folder that has vc.png) (sgb)
+
+* disable territory name drawing for territories listed in map.properties with a property like dont_draw_territory_names=Germany,Japan (sgb)
+
+* allow for map scaling (sgb)
+
+* let ai play in multiplayer games (sgb)
+
+* fix [ 1533252 ] problem clearing out pbem (sgb)
+
+* make the game look better on a mac (sgb)
+
+* better factory images (eleazar)
+
+* lhtr hb rules (not sure if low luck is correct) (sgb)
+
+* lobby server/client (sgb)
+
+* you can kick players out of a game on startup screen (sgb)
+
+* add odds calculator (zengland)
+
+* fix bug [ 1505192 ] air land in conquered territory (sgb)
+
+* allow networked games to be password protected (sgb)
+
+* for mac and linux, save games in home folder (sgb)
+
+* add convoy centers in europe map (iron cross)
+
+* put saved games in users home directory (sgb)
+
+* fix misspelt territory names in revised and lhtr (Jeffrey Henning)
+
+* add lhtr victory citries (sgb)
+
+* super subs defend at 3 in lhtr (sgb)
+
+* make lhtr aa guns not fire in non combat move (sgb)
+
+* pacific and europe map fixes (Opurt, FlyingSpaghettiMonster)
+
+Changes for 0.8.2.1
+
+* fix installer with embedded java to actually use the embedded java (sgb)
+
+* default sound to off (sgb)
+
+* fix nz territory in four if by sea (rod the god)
+
+Changes for 0.8.2
+
+* fix bug where observers joining mid game may ignore some updates (sgb)
+
+* lock game data before switching to history (sgb)
+
+* fix bug where casualty selection would sometimes appear before the battle panel (sgb)
+
+* fix bug where naval bombardment doesnt work for the first player to fight in round 0 (sgb)
+
+* change two if by sea to four if by sea (rod the god)
+
+* remove nuetral player in capture the flag (sgb)
+
+Changes for 0.8.1
+
+* add capture the flag map (iron cross)
+
+* let ai place in places other than the capitol if not all units can be placed in the capitol (sgb)
+
+* fix move bug when no units are selected with pop up (sgb)
+
+* fix "Not enough units in starting territory" bug when hitting done (sgb)
+
+* documentation updates (sgb)
+
+* fix history update bug in multiplayer (sgb)
+
+* fix bug where if A has 1 carrier and no fighters in a sea zone and is allied to B with 1 carrier and 3 fighters in the saem sea zone, when A moves his carrier out of the sea zone, B's 1 fighter doesnt move with it (if A moved his carrier in the sea zone after B moved his carrier into the sea zone)
+
+* show strategic bombing raid casualty notification (sgb)
+
+* fixed bug where deselecting game-confirm enemy casualties would also stop confirming your own automatically selected casualties (sgb)
+
+* europe and pacific map fixes (zero pilot)
+
+Changes for 0.8
+
+* save last used map skin and unit size (beagle)
+
+* add next and back buttons to history (sgb)
+
+* renamed game xml files (sgb)
+
+* moves canal info to the xml file (if you have a mod based on revised or classic, canals will be broken unless you add them in the xml, do a search for canal in classic.xml or revised.xml to see how it is done) (sgb)
+
+* fix bug where aa guns in retaken allied capitols werent reverting to there original owner (sgb)
+
+* replace random ai with weak ai (sgb)
+
+* fix pbem saved emails not always showing up on the start screen (sgb)
+
+* highlight units on mouse over when moving (sgb)
+
+Change for 0.7.5
+
+* when changing to a skin that has relief images, always show the relief images (sgb)
+
+* add destroyer production to europe map (sgb)
+
+* fix map skins in zip files on windows (sgb)
+
+* map skins must use - not : to seperate skin from map names (eg revised-Coal, not revised:Coal).  Windows doesnt allow : in file names (sgb)
+
+* if user presses done when no moves were made, confirm that they do not want to move (sgb)
+
+* fix bug [ 1440134 ] rockets shouldnt move after firing (sgb)
+
+* add tripleawarclub dice server (clausewitz, pughead, sgb)
+
+Changes for 0.7.4
+
+* remove autosave... from console output (sgb)
+
+* allow map skins to depend on each other (add a dependencies.txt file to the skin, with a single line dependencies=skin1,skin2,skin3)  skin1 is the name of the skin (eg pact_of_steel:coal, if pact_of_steel:coal is in a zip file, do not include the .zip)
+
+* better retreat dialog (sgb)
+
+* allow map to have PU images.  Images should be in the map folder, in a folder called PUs.  They should be named 1.png, 2.png...  if no png image is found for a given number, a string will be drawninstead. (sgb)
+
+* maps (and skins) can be zip files (sgb)
+
+* map skins can override unit,flag and vc images (sgb)
+
+* map skin directories must now be named original_map_name:Skin, rather than original_map_nameSkin as before (sgb)
+
+* move images and maps to top level folders (these are not on the classpath).  (sgb)
+
+* allow defining where to place PU markers using pu_place.txt.  The x,y location is such the point is the bottom left of the image. (sgb)
+
+* allow turn off drawing map names in map.properties using,  map.showTerritoryNames=false (sgb)
+
+* move chat panel to main window for networked games (sgb)
+
+* fixed bug where autosave game would add too many PUs at start up (sgb)
+
+* fix bug where attacking air units couldnt retreat if all attacking subs moved to attacking sea zone via submerged route (sgb)
+
+* allow clients to save a networked game (sgb)
+
+* game menu to show who is playing what player (sgb)
+
+* when a player (not an observer) leaves the game, the game is saved automatically, and the game ends (sgb)
+
+* observers can join and leave the game (server can optionally ban new observers) (sgb)
+
+* new startup screen (sgb)
+
+* add minimap (map by Clausewitz)
+
+* add delegate execution manager, block delegates from executing while save in progress (sgb)
+
+* make game data lock into a read/write lock, extend the game data lock to history (sgb)
+
+* add random ai (sgb)
+
+* if two players with the same name join the game, add a _1 to the second player (sgb)
+
+* remove ISaveableDelegate, all Delegates are saveable (sgb)
+
+Changes for 0.7.2.4
+
+* move some code into swing event thread (sgb)
+
+* dont let players press dont place once player selection is done (sgb)
+ 
+* should read you need java >= 5.0, not java > 5.0 (sgb)
+
+Changes for 0.7.2.3
+
+* make battle window a dialog (it will always be in front of the main window!) (sgb)
+
+* fix invalid roll count in multiplayer games when all bombers are hit by aa guns (sgb)
+
+* fix null pointer when placing units in sea zone with enemy units (classic game only) (sgb)
+
+* fix null pointer when when selecting null territories during movement (sgb)
+
+Change for 0.7.2.2
+
+* fix convoys (adam_j)
+
+* fix bid purchase (sgb)
+
+* Iron blitz mod (ic)
+
+* fixed string index out of bounds when rolling pbem dice (sgb)
+
+Changes for 0.7.2.1
+
+* fix stat panel in europe (sgb)
+
+* fix bug  1357768  0.7.2 dead defenders firing (sgb)
+
+Change for 0.7.2
+
+* on PBEM screen, add id field (for challenge id) (sgb)
+
+* when clicking on a battle in history, center map on that territory (sgb)
+
+* allow unloading units from a battle zone into newly conquered territories (sgb)
+
+* allow saving games during battles (sgb)
+
+* shift click on a unit (or territory) to select all units in the territory (sgb)
+
+* rename attatchment to attachment (sgb)
+
+* remove singleton image factories, move to UIContext (sgb)
+
+* when retreating from a sea zone, if a fighter has no movement, the fighter gets a 1 movement bonus (sgb)
+
+* battleships can only bombard if they are in a sea zone where transports unloaded (sgb)
+
+* fix bug [ 1277099 ] map refresh problems undoing move with captured aa gun (sgb)
+
+* Japanese victory points for a&a pacific (Adam_J)
+
+changes for 0.7.1
+
+* updated readme and user docs (George_H)
+
+* if we have multiple transports that unloaded troops to an amphibious assault, then the transports 
+  retreat from a  naval battle that precedes the amphibious assault, then too many units will retreat (sgb)
+
+* various no pop up movement bugs (sgb)
+
+* fixed chinese tech in big world 1942 map (sgb)
+
+* partial fix for marines (marines still do not show up correctly in battle table) (sgb)
+
+* fixed missing connection from solomon in pacific map (sgb)
+
+* fixed bug [ 1259381 ] Bid purchasing (sgb)
+
+* fixed no pop up movement for scaled units (sgb)
+
+* removed territory attatchments for sea zones in big world map (sgb)
+
+* Fixed missing connections in big world map, north to south brazil, and sea of Okhotsk to West Bering Sea (kc1189)
+
+* More email validation (Adam_J)
+
+* Chinese infantry mechanism added for a&a pacific (Adam_J)
+
+* Convoy Zones implemented (Adam_J)
+
+* Add code for marines (Adam_J)
+
+* Add code in for kamikaze (Adam_J)
+
+* fix bug located http://maddlinks.com/triplea/index.php?showtopic=707 (Adam Jette)
+
+Changes for 0.7.0
+
+* add movement help to help menu (sgb)
+
+* remove hints menu (sgb)
+
+* movement now done without pop up dialogs  (sgb, lnxduk)
+
+* only allow transports to unload units to 1 territory  (sgb)
+
+* fixed bug [ 1238910 ] PBEM mode cannot accept subdomains  (sgb)
+
+* add "click" to select casualties button, many users are confused and dont know to click to select casualties  (sgb)
+
+* reduce network traffic somewhat by more efficient serialization  (sgb)
+
+* autosave now happens at the end of a turn, after combat move and before non combat  (sgb)
+
+* use annotations to determine when to autosave  (sgb)
+
+* change to jdk 1.5, 1.5 is now required to build and to run  (sgb)
+
+* fix bug where versions like 0.6.0.1 would be displayed as 0.6.1  (sgb)
+
+Changes for 0.6.0.1
+
+* fix bug [ 1225276 ] Aircraft unable to attack or land (sgb)
+
+Changes for 0.6.0
+
+* updated developer docs, incomplete for now (George_H)
+
+* draw a line under overflow units so you can tell what belongs in a territory (sgb)
+
+* fixed bug where you could retreat subs if all your opponents destroyers were destroyed in one round of combat (sgb)
+
+* fixed bug where damaged battleships would not repair while viewing history (sgb)
+
+* fixed small map refresh (whole map goes white) when switching skins (sgb)
+
+* fixed bug where sometimes dice would not show up on the select casualties panel (sgb)
+
+* removed "Heavy Bombers Pick best of X Dice" option from classic and wandering head big world, it didnt work (sgb)
+
+* Fixed bug where transport moves could be undone before moves where the transport had been loaded/unloaded (sgb)
+
+Changes for 0.5.4
+
+* fixed bug where units could blitz through territories with an aa gun if they blitzed in 2 steps  (sgb)
+
+* fixed bug [ 1188411 ] Missing client text (Chat window) 5.2.2 (sgb)
+
+* fixed bug [ 1205387 ] Saving game during combat 0.5.3 (sgb)
+
+* fixed bug [ 1205775 ] 0.5.3 eMail Bug - hyphens not allowed in emails (sgb)
+
+* fixed bug [ 1205504 ] Units can land in amphibious assaults when transport is sunk (sgb)
+
+* fixed bug [ 1198828 ]Heavy Bomber Tech Broken 0.5.3 (sgb)
+
+Changes for 0.5.3
+
+* added europe and pacific maps (incomplete versions) by iron cross (George_H)
+
+* added extra dice statistics such as, median, variance, and standard deviation (George_H)
+
+* fix bug [ 1023326 ] Fig Landing Problem, J1 (sgb)
+
+* more flexible validation for planes landing on carriers (sgb)
+
+* add stat export menu item Game->Export Game Stats (sgb)
+
+* upgraded plastic look and feel to version 1.3.1 (sgb)
+
+* add vc drawing and added vc cities to stats (sgb)
+
+* better email address ui and validation, allow up to 5 emails in to and copy (sgb)
+
+* added white factory images (zero_pilot)
+
+* added drawing capitol markers (capitol markers contributed by black elk) (sgb)
+
+* added junit.jar file to lib and removed it from .ant.properties (sgb)
+
+* fixed bug  [ 1070176 ] Mistakes in calculating Battlescore (change in TUV) (sgb)
+
+* fixed bug [ 1116632 ] v0.5.1.1 TripleA skipping battle in Borneo (sgb)
+
+* fixed bug [ 1145318 ] Another Error on 5.2.2 (sgb)
+
+* fixed bug [ 1157717 ] 0.5.2.2 Error with question : Sumerge subs (sgb)
+
+* fixed bug [ 1175467 ] game "stuck" when doing multiple battles with same units (sgb)
+
+* fixed bug [ 1171596 ] Rocket Tech bug v0.5.2.2, we now always ask what territory to attack with rockets, even if there is only one choice, this allows the user to decline a rocket attack (sgb)
+
+* during battles the dice are sorted according to unit type so that when you review the dice rolls, you can tell what unit rolled for which dice (sgb)
+
+* fix bug [ 1144356 ] alter email header on PBEM (this is really a feature request) (sgb)
+
+* added new chinese units and cruiser, halftrack, marine units (iron_cross)
+
+* fixed [ 1158469 ] Missing units in Purchase Menu when odd number of choices (sgb)
+
+* you can now specify victory cities in xml using a territory attachement (sgb)
+
+* added tile map drawing (sgb)
+
+* add a copy to clipboard button on the console (sgb)
+
+* if available, console will print stack traces when enumerating threads (sgb)
+
+* put neutral player color in map.properties (sgb)
+
+Changes for 0.5.2.2
+
+* fixed Dont play button on client screen. (sgb)
+
+* threading fixes. (sgb)
+
+Changes for 0.5.2
+
+* add switch in map.properties to disable scrolling map around the edges (sgb)
+ 
+* added scripted random for debugging (sgb)
+
+* added new map by WanderingHead (wandering head)
+
+* add confirmation prompt when exiting the game (sgb)
+
+* jdk 1.4 - 1.5 compatability (sgb)
+
+* Add has relief property to map.properties (sgb)
+
+* Add default unit scroll size to map.properties (sgb)
+
+* Changes to make TripleA compile under Sun JDK 1.5.x (George_H)
+
+* Added better unix shell scripts for TripleA, thanks DMan for the scripts (George_H)
+
+* Added better path search so TripleA can run from any directory (sgb)
+
+* Now all map utils have proper "save as" dialogs (George_H)
+
+* Added new class to prompt user to select a directory so map utils won't save files to a hardcoded dir (George_H)
+
+* Define player colour in map.properties to allow easy modification and adding new players (sgb)
+
+* Added option to limit PUs lost in a territory during one round. This is necessary to implement LHTR ruleset. (Ali Ibrahim)
+
+* Fixed bug in Irony PBEM random source: It did not use the max parameter passed to the random methods. This fixes the AA casualty selection problem in PBEM. (Ali Ibrahim)
+
+* Added new technology activation delegate to allow control of when technologies actually take effect. This is used to allow delay of technology activation in LHTR. (Ali Ibrahim)
+
+* Changed mouse behavior such that only the left button is used to select a territory to put units in. (Ali Ibrahim)
+
+* Added more options for unit size using submenu. (Ali Ibrahim)
+
+* Changed ordering of properties in the launcher properties tab to use ordering in game XML file. (Ali Ibrahim)
+
+* Added Map Skins code to allow multiple (1 and greater) map skins to be used for each game based on a directory search pattern. Skins must be in maps folder with game name as prefix (ie. revisedMySkin). (Beagle)
+
+* Changed how bombardment works. Now users pick where to bombard before any battles are resolved. This allows users not to bombard with a unit (for example if they wish to move it during non-combat) by picking "None". This also fixes the bug where a a unit could retreat from a battle and bombard in the same turn. It also allows user to divide their bombardment shots however they like when there are multiple bombardment targets. (Ali Ibrahim)
+
+* Fixed bug #1067768 concerning the border of seazone 27 and Belgian Congo. (George_H)
+
+* Fixed bug #1067331 by removing the connection between seazone 51 and 56 for Pact of Steel mod. (George_H)
+
+* Fixed bug #1067073 by removing the connection between seazone 15 and 16 for Pact of Steel mod. (George_H)
+
+* Fixed bug #1043826 concerning missing sea zone border & missing pixles on border. (George_H)
+
+* Added channel and remote messengers. (sgb)
+
+* Added game vault. (sgb)
+
+* Fixed bug [ 1053071 ] No non-combat movement (sgb)
+
+* Fixed bug where properties werent being updated on client (sgb)
+
+* Fixed bug [ 991810 ] Internet Bid Problem (sgb)
+
+* Fixed bug [ 1051937 ] Number of bid PUs displayed (sgb)
+
+* Fixed bug [ 1102812 ] flag image names not based on xml names (sgb)
+
+* Fixed bug [ 1102225 ] Error by adding better error messages (sgb)
+
+* Store pbem emails in saved game (sgb)
+
+* Fixed bug [ 1095206 ] AA Firing too quickly v0.5.1 (sgb)
+
+* Fixed bug [ 1092852 ] bug in 2bysea Version .5.1 (sgb)
+
+* Fixed bug [ 1021352 ] advanced tech prob (sgb)
+
+* Fixed bug [ 1021350 ] Tech Prompt (sgb)
+
+* Fixed bug [ 1006050 ] Unable to conquer territories (sgb)
+
+* Fixed bug [ 1021351 ] No Buy Confirmation (sgb)
+
+* Add micro to Version, ie version can now be xx.xx.xx.xx (sgb)
+
+Changes for 0.5.1
+
+* Fixed bug where defending transported units were not correctly removed when their transports were killed. (Ali Ibrahim)
+
+* Fixed bug where transported AA guns fired in naval battles. (Ali Ibrahim)
+
+* Added a new developer document with map utils info. (George_H)
+
+* Added menu option to use small unit images on map. (Ali Ibrahim)
+
+* Large improvement and re-organizing of user documentation. (George_H)
+
+* Fully implemented Pact Of Steel mod (by Black Elk/Beagle). (George_H)
+
+* Improved map directory structures and code for triplea concerning TerritoryData class. (George_H)
+
+* Small iteration fix applied to PolygonGrabber to prevent crash. (Beagle)
+
+* Improve all map utilities so they are user friendly and better to use. (George_H)
+
+* Fixed bug where air units could define retreat paths (they still can in some games). (Ali Ibrahim)
+
+* Added MersenneTwister Thread Safe (MT199937) Random Number Generator with Permission from Sean Luke. (George_H)
+
+* Added Low Luck option following DAAK rules. However, the low luck rules were not implemented for sbr's and tech rolls. Also it is incompatible with the heavy bomber downgrade option. (Ali Ibrahim)
+
+* Allowed transports carrying aa guns to move in combat, although the aa guns still cannot be loaded/unloaded in the combat move. (Ali Ibrahim)
+
+* Fixed map bugs (missing connection between sz25, sz43, wrong connection between sz51, sz56, misspelling of Angola). (Ali Ibrahim)
+
+* Added logic to prefer routes without neutral countries. (Ali Ibrahim)
+
+* Fixed bug which did not allow placement of bid units. (Ali Ibrahim)
+ 
+* Fixed bug which did not allow placement of units in classic. (Ali Ibrahim)
+
+* Fixed bug which did not allow placement of AA guns correctly. (Ali Ibrahim)
+
+* Fixed bug which did not correctly reload transports which had conducted an amphibious assault and then retreated. (Ali Ibrahim)
+
+* Added capability to bid for allies. (Ali Ibrahim)
+
+Changes for 0.5.0
+
+* Added TUV (total unit value) column in statistics panel. Added TUV lost in battle as part of battle end message. (Ali Ibrahim)
+
+* Fixed bug in statistics table when adding a player such as Italy (George_H).
+
+* Added logic to check production limits to display in production panel. (Kevin Sanders).
+
+* Added logic to not consider moving land units into water if there are no transports there. (Ali Ibrahim)
+
+* Added game defintion file, flags, color for Italian player. (George_H).
+
+* Fixed bug where allied air units which are cargo attacked. (Ali Ibrahim)
+
+* Changed game logic to allow destroyers to pass over submerged subs. (Ali Ibrahim)
+
+* Fixed bug which didn't allow fighters to consider landing in gibralator due to issue with pathing and neutrals. (Ali Ibrahim)
+
+* Added warning for users using Java 1.5 about some serialization problems which cause an incompatibility with saved games in Java 1.4. (George_H)
+
+Changes for 0.4.9
+
+* Fix for bug #1010428 bypassing the unit selection popup message when there is only 1 unit to be moved. (Ali Ibrahim)
+
+* AI rules added,experimental. (Sean Bridges/Troy)
+
+* Stack trace when starting triplea after a saved game fixed. (Sean Bridges)
+
+* Fixed bug when defending subs get first strike fire, even if an enemy destroyer is present. (Sean Bridges)
+
+* Changes in Battle Panel relating to SWING event thread to stop game from freezing in battle mode. (Sean Bridges)
+
+* Fix for Bug #1001946 fixed for units crossing water. Now crossesWater only returns true if the route starts and ends on land and also contains a water territory. (James Damour)
+
+* Fixes for Points 1,4 (and possibly 3) for Bug #1003736. (Ali Ibrahim)
+
+* Clean up of neutrality violation messages. (Ali Ibrahim)
+
+* Now defending planes can land in any adjacent territory if their carrier is lost in combat. (Ali Ibrahim)
+
+Changes for 0.4.8
+
+* Automatic casualty selection has been also added (Ali Ibrahim)
+
+* Drag scrolling and mouse wheel scrolling (since 0.4.7).  (lnxduk)
+
+* TripleA Chat improvements. (lnxduk)
+
+* Fix for null network interface on IRIX 6.5 OS. (George_H)
+
