@@ -1,6 +1,8 @@
 1.2.5
 
-better server side INode validation (sgb)
+* limit status message length and remove combining characters (sgb)
+
+* better server side INode validation (sgb)
 
 1.2.5.4
 
