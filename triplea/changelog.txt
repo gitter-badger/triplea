@@ -1,3 +1,5 @@
+* server side validation of anonymous user login names (sgb)
+
 1.2.5
 
 * limit status message length and remove combining characters (sgb)
