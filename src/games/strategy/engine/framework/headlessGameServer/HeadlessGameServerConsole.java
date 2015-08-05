@@ -64,8 +64,6 @@ public class HeadlessGameServerConsole {
       out.flush();
       try {
         final String command = in.readLine();
-        // if (m_shutDown)
-        // break;
         if (command != null) {
           process(command.trim());
         }

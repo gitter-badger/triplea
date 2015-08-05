@@ -50,42 +50,39 @@ import games.strategy.util.Util;
  *
  */
 public class HeadlessGameServer {
-  /*
-   * {
-   * // we are not using this, in case the user wants to have a host bot with the host bot ui. so instead let them set it with: java
-   * -Djava.awt.headless=true
-   * // must be static, must be very first thing in the class:
-   * System.setProperty("java.awt.headless", "true");
-   * // System.out.println("Headless AWT Test: " + java.awt.GraphicsEnvironment.isHeadless());
-   * }
-   */
+
   public static final String TRIPLEA_GAME_HOST_UI_PROPERTY = "triplea.game.host.ui";
   public static final String TRIPLEA_HEADLESS = "triplea.headless";
   public static final String TRIPLEA_GAME_HOST_CONSOLE_PROPERTY = "triplea.game.host.console";
-  final static Logger s_logger = Logger.getLogger(HeadlessGameServer.class.getName());
-  static HeadlessGameServerConsole s_console = null;
-  private static HeadlessGameServer s_instance = null;
-  private final AvailableGames m_availableGames;
-  private final GameSelectorModel m_gameSelectorModel;
-  private SetupPanelModel m_setupPanelModel = null;
-  private HeadlessServerMainPanel m_mainPanel = null;
-  private final boolean m_useUI;
-  private final ScheduledExecutorService m_lobbyWatcherResetupThread = Executors.newScheduledThreadPool(1);
-  private ServerGame m_iGame = null;
-  private boolean m_shutDown = false;
-  @SuppressWarnings("deprecation")
-  private final String m_startDate = new Date().toGMTString();
+  private static final Logger s_logger = Logger.getLogger(HeadlessGameServer.class.getName());
   private static final int LOBBY_RECONNECTION_REFRESH_SECONDS_MINIMUM = 21600;
   private static final int LOBBY_RECONNECTION_REFRESH_SECONDS_DEFAULT = 2 * LOBBY_RECONNECTION_REFRESH_SECONDS_MINIMUM;
   private static final String NO_REMOTE_REQUESTS_ALLOWED = "noRemoteRequestsAllowed";
 
+  private static HeadlessGameServerConsole s_console = null;
+  private static HeadlessGameServer s_instance = null;
+
+  private final AvailableGames m_availableGames;
+  private final GameSelectorModel m_gameSelectorModel;
+  private final boolean m_useUI;
+  private final ScheduledExecutorService m_lobbyWatcherResetupThread = Executors.newScheduledThreadPool(1);
+  @SuppressWarnings("deprecation")
+  private final String m_startDate = new Date().toGMTString();
+
+  private SetupPanelModel m_setupPanelModel = null;
+  private HeadlessServerMainPanel m_mainPanel = null;
+  private ServerGame m_iGame = null;
+  private boolean m_shutDown = false;
+
+
   public static String[] getProperties() {
-    return new String[] {GameRunner2.TRIPLEA_GAME_PROPERTY, TRIPLEA_GAME_HOST_CONSOLE_PROPERTY, TRIPLEA_GAME_HOST_UI_PROPERTY,
-        GameRunner2.TRIPLEA_SERVER_PROPERTY,
-        GameRunner2.TRIPLEA_PORT_PROPERTY, GameRunner2.TRIPLEA_NAME_PROPERTY, GameRunner2.LOBBY_HOST, GameRunner2.LOBBY_PORT,
-        GameRunner2.LOBBY_GAME_COMMENTS,
-        GameRunner2.LOBBY_GAME_HOSTED_BY, GameRunner2.LOBBY_GAME_SUPPORT_EMAIL, GameRunner2.LOBBY_GAME_SUPPORT_PASSWORD,
-        GameRunner2.LOBBY_GAME_RECONNECTION,
+    return new String[] {
+        GameRunner2.TRIPLEA_GAME_PROPERTY, TRIPLEA_GAME_HOST_CONSOLE_PROPERTY,
+        TRIPLEA_GAME_HOST_UI_PROPERTY, GameRunner2.TRIPLEA_SERVER_PROPERTY,
+        GameRunner2.TRIPLEA_PORT_PROPERTY, GameRunner2.TRIPLEA_NAME_PROPERTY,
+        GameRunner2.LOBBY_HOST, GameRunner2.LOBBY_PORT, GameRunner2.LOBBY_GAME_COMMENTS,
+        GameRunner2.LOBBY_GAME_HOSTED_BY, GameRunner2.LOBBY_GAME_SUPPORT_EMAIL,
+        GameRunner2.LOBBY_GAME_SUPPORT_PASSWORD, GameRunner2.LOBBY_GAME_RECONNECTION,
         GameRunner2.TRIPLEA_SERVER_START_GAME_SYNC_WAIT_TIME, GameRunner2.TRIPLEA_SERVER_OBSERVER_JOIN_WAIT_TIME};
   }
 
@@ -497,6 +494,17 @@ public class HeadlessGameServer {
 
   public HeadlessGameServer(final boolean useUI) {
     super();
+
+    // grab these before we override them with the loggers
+    final InputStream in = System.in;
+    final PrintStream out = System.out;
+    setupLogging();// after handling the command lines, because we use the triplea.game.name= property in our log file name
+    final boolean startUI = getUseGameServerUI();
+
+    if (!startUI) {
+      ClipPlayer.setBeSilentInPreferencesWithoutAffectingCurrent(true);
+    }
+
     if (s_instance != null) {
       throw new IllegalStateException("Instance already exists");
     }
@@ -577,6 +585,7 @@ public class HeadlessGameServer {
       }
     }, reconnect, reconnect, TimeUnit.SECONDS);
     s_logger.info("Game Server initialized");
+
   }
 
   private static synchronized void restartLobbyWatcher(final SetupPanelModel setupPanelModel, final ServerGame iGame) {
@@ -807,12 +816,18 @@ public class HeadlessGameServer {
 
   public static void main(final String[] args) {
     System.out.println("Headless AWT Test: " + java.awt.GraphicsEnvironment.isHeadless());
-    handleCommandLineArgs(args);
+
+
+    if( handleCommandLineArgs(args) ) {
+    }
+
+
     // grab these before we override them with the loggers
     final InputStream in = System.in;
     final PrintStream out = System.out;
     setupLogging();// after handling the command lines, because we use the triplea.game.name= property in our log file name
     final boolean startUI = getUseGameServerUI();
+
     if (!startUI) {
       ClipPlayer.setBeSilentInPreferencesWithoutAffectingCurrent(true);
     }
@@ -849,7 +864,7 @@ public class HeadlessGameServer {
   /**
    * Move command line arguments to System.properties
    */
-  private static void handleCommandLineArgs(final String[] args) {
+  private static boolean handleCommandLineArgs(final String[] args) {
     System.getProperties().setProperty(TRIPLEA_HEADLESS, "true");
     final String[] properties = getProperties();
     // if only 1 arg, it might be the game path, find it (like if we are double clicking a savegame)
@@ -953,8 +968,8 @@ public class HeadlessGameServer {
     }
     if (printUsage) {
       usage();
-      System.exit(-1);
     }
+    return !printUsage;
   }
 
   private static String getValue(final String arg) {
