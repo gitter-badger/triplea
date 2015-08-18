@@ -1,14 +1,16 @@
 language: java
 jdk:
   - oraclejdk8
-  - oraclejdk7
 addons:
   apt:
     packages:
       - nsis
 before_deploy:
+  - ls 
   - ./gradlew releaseArtifacts
+  - ls artifacts
   - ./.travis/buildWindowsInstaller.sh
+  - ls artifacts
   - ./.travis/buildMacDmg.sh
   - ls artifacts
 deploy:
