@@ -12,7 +12,7 @@ mkdir -p winInstallTmp
 cp artifacts/triple*zip winInstallTmp/
 cp installer/installer.nsi winInstallTmp/
 cd winInstallTmp
-makensis -Dversion=$VERSION installer.nsi
+makensis -Dversion=$TRAVIS_TAG installer.nsi
 cp triplea_installer.exe ../artifacts/
 cd ..
 

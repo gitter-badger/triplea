@@ -1,6 +1,4 @@
 language: java
-env:
-  - VERSION="1.8.0.5test"
 jdk:
   - oraclejdk8
 addons:
