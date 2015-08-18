@@ -74,9 +74,9 @@ task copyShadow(dependsOn: copyShadowSetup, type: Copy) {
    into 'bin/triplea.jar' 
 }
 
-String zipBase = 'tripleA-' + version
+String zipBase = 'triplea-' + version
 
-String zipDestFile = 'tripleA-' + version + '.zip'
+String zipDestFile = 'triplea-' + version + '.zip'
 
 task zip(dependsOn: copyShadow) << {
   ant.zip(destfile: zipDestFile, compress: true) {
@@ -106,7 +106,6 @@ task zip(dependsOn: copyShadow) << {
 }
 
 def artifactsDir = new File( "artifacts")
-
 
 task copyZip(dependsOn: ['zip', 'setupArtifactsDir'], type: Copy) {
   from zipDestFile

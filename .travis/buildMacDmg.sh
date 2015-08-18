@@ -2,3 +2,4 @@
 
 set -ev
 
+echo "does not yet do anything"
