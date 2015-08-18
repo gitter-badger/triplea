@@ -21,3 +21,4 @@ deploy:
     on:
       repo: DanVanAtta/triplea
       all_branches: true
+      on_tags: true
