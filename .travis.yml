@@ -1,4 +1,6 @@
 language: java
+env:
+  - GAME_VERSION="1_8_0_5a"
 jdk:
   - oraclejdk8
   - oraclejdk7
@@ -7,8 +9,9 @@ addons:
     packages:
       - nsis
 before_deploy:
-  - ./gradlew shadowjar
-  - ls
+  - ./gradlew releaseArtifacts
+  - ./.travis/buildWindowsInstaller.sh
+  - ./.travis/buildMacDmg.sh
 deploy:
   provider: releases
   api-key:
