@@ -9,8 +9,6 @@ before_deploy:
   - ls 
   - ./gradlew releaseArtifacts
   - ls artifacts
-  - ./.travis/buildWindowsInstaller.sh
-  - ls artifacts
   - ./.travis/buildMacDmg.sh
   - ls artifacts
 deploy:
