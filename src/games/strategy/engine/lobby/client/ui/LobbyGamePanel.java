@@ -437,14 +437,7 @@ public class LobbyGamePanel extends JPanel {
     if (result != JOptionPane.OK_OPTION) {
       return;
     }
-    // we sort the table, so get the correct index
-    final int modelIndex = m_tableSorter.modelIndex(selectedIndex);
-    final GameDescription description = m_gameTableModel.get(modelIndex);
-    final String hostedByName = description.getHostedBy().getName();
-    final INode lobbyWatcherNode = new Node(
-        (hostedByName.endsWith("_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME) ? hostedByName
-            : hostedByName + "_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME),
-        description.getHostedBy().getAddress(), description.getHostedBy().getPort());
+    final INode lobbyWatcherNode = getLobbyWatcherNodeForTableRow(selectedIndex);
     final IModeratorController controller = (IModeratorController) m_messengers.getRemoteMessenger()
         .getRemote(AbstractModeratorController.getModeratorControllerName());
     controller.boot(lobbyWatcherNode);
@@ -456,14 +449,7 @@ public class LobbyGamePanel extends JPanel {
     if (selectedIndex == -1) {
       return;
     }
-    // we sort the table, so get the correct index
-    final int modelIndex = m_tableSorter.modelIndex(selectedIndex);
-    final GameDescription description = m_gameTableModel.get(modelIndex);
-    final String hostedByName = description.getHostedBy().getName();
-    final INode lobbyWatcherNode = new Node(
-        (hostedByName.endsWith("_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME) ? hostedByName
-            : hostedByName + "_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME),
-        description.getHostedBy().getAddress(), description.getHostedBy().getPort());
+    final INode lobbyWatcherNode = getLobbyWatcherNodeForTableRow(selectedIndex);
     final IModeratorController controller = (IModeratorController) m_messengers.getRemoteMessenger()
         .getRemote(AbstractModeratorController.getModeratorControllerName());
     final String text = controller.getInformationOn(lobbyWatcherNode);
@@ -486,13 +472,7 @@ public class LobbyGamePanel extends JPanel {
       return;
     }
     // we sort the table, so get the correct index
-    final int modelIndex = m_tableSorter.modelIndex(selectedIndex);
-    final GameDescription description = m_gameTableModel.get(modelIndex);
-    final String hostedByName = description.getHostedBy().getName();
-    final INode lobbyWatcherNode = new Node(
-        (hostedByName.endsWith("_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME) ? hostedByName
-            : hostedByName + "_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME),
-        description.getHostedBy().getAddress(), description.getHostedBy().getPort());
+    final INode lobbyWatcherNode = getLobbyWatcherNodeForTableRow(selectedIndex);
     final IModeratorController controller = (IModeratorController) m_messengers.getRemoteMessenger()
         .getRemote(AbstractModeratorController.getModeratorControllerName());
     final JLabel label = new JLabel("Enter Host Remote Access Password, (Leave blank for no password).");
@@ -523,6 +503,17 @@ public class LobbyGamePanel extends JPanel {
     JOptionPane.showMessageDialog(null, scroll, "Bot Chat Log", JOptionPane.INFORMATION_MESSAGE);
   }
 
+  private INode getLobbyWatcherNodeForTableRow(final int selectedIndex) {
+    final int modelIndex = m_tableSorter.modelIndex(selectedIndex);
+    final GameDescription description = m_gameTableModel.get(modelIndex);
+    final String hostedByName = description.getHostedBy().getName();
+    final INode lobbyWatcherNode = new Node(
+        (hostedByName.endsWith("_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME) ? hostedByName
+            : hostedByName + "_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME),
+        description.getHostedBy().getAddress(), description.getHostedBy().getPort());
+    return lobbyWatcherNode;
+  }
+
   private void mutePlayerInHeadlessHostBot() {
     final int selectedIndex = m_gameTable.getSelectedRow();
     if (selectedIndex == -1) {
@@ -551,14 +542,7 @@ public class LobbyGamePanel extends JPanel {
     } catch (final NumberFormatException e) {
       return;
     }
-    // we sort the table, so get the correct index
-    final int modelIndex = m_tableSorter.modelIndex(selectedIndex);
-    final GameDescription description = m_gameTableModel.get(modelIndex);
-    final String hostedByName = description.getHostedBy().getName();
-    final INode lobbyWatcherNode = new Node(
-        (hostedByName.endsWith("_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME) ? hostedByName
-            : hostedByName + "_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME),
-        description.getHostedBy().getAddress(), description.getHostedBy().getPort());
+    final INode lobbyWatcherNode = getLobbyWatcherNodeForTableRow(selectedIndex);
     final IModeratorController controller = (IModeratorController) m_messengers.getRemoteMessenger()
         .getRemote(AbstractModeratorController.getModeratorControllerName());
     final JLabel label = new JLabel("Enter Host Remote Access Password, (Leave blank for no password).");
@@ -597,14 +581,7 @@ public class LobbyGamePanel extends JPanel {
     if (playerToBeBooted == null) {
       return;
     }
-    // we sort the table, so get the correct index
-    final int modelIndex = m_tableSorter.modelIndex(selectedIndex);
-    final GameDescription description = m_gameTableModel.get(modelIndex);
-    final String hostedByName = description.getHostedBy().getName();
-    final INode lobbyWatcherNode = new Node(
-        (hostedByName.endsWith("_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME) ? hostedByName
-            : hostedByName + "_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME),
-        description.getHostedBy().getAddress(), description.getHostedBy().getPort());
+    final INode lobbyWatcherNode = getLobbyWatcherNodeForTableRow(selectedIndex);
     final IModeratorController controller = (IModeratorController) m_messengers.getRemoteMessenger()
         .getRemote(AbstractModeratorController.getModeratorControllerName());
     final JLabel label = new JLabel("Enter Host Remote Access Password, (Leave blank for no password).");
@@ -655,14 +632,7 @@ public class LobbyGamePanel extends JPanel {
     } catch (final NumberFormatException e) {
       return;
     }
-    // we sort the table, so get the correct index
-    final int modelIndex = m_tableSorter.modelIndex(selectedIndex);
-    final GameDescription description = m_gameTableModel.get(modelIndex);
-    final String hostedByName = description.getHostedBy().getName();
-    final INode lobbyWatcherNode = new Node(
-        (hostedByName.endsWith("_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME) ? hostedByName
-            : hostedByName + "_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME),
-        description.getHostedBy().getAddress(), description.getHostedBy().getPort());
+    final INode lobbyWatcherNode = getLobbyWatcherNodeForTableRow(selectedIndex);
     final IModeratorController controller = (IModeratorController) m_messengers.getRemoteMessenger()
         .getRemote(AbstractModeratorController.getModeratorControllerName());
     final JLabel label = new JLabel("Enter Host Remote Access Password, (Leave blank for no password).");
@@ -696,14 +666,7 @@ public class LobbyGamePanel extends JPanel {
     if (result != JOptionPane.OK_OPTION) {
       return;
     }
-    // we sort the table, so get the correct index
-    final int modelIndex = m_tableSorter.modelIndex(selectedIndex);
-    final GameDescription description = m_gameTableModel.get(modelIndex);
-    final String hostedByName = description.getHostedBy().getName();
-    final INode lobbyWatcherNode = new Node(
-        (hostedByName.endsWith("_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME) ? hostedByName
-            : hostedByName + "_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME),
-        description.getHostedBy().getAddress(), description.getHostedBy().getPort());
+    final INode lobbyWatcherNode = getLobbyWatcherNodeForTableRow(selectedIndex);
     final IModeratorController controller = (IModeratorController) m_messengers.getRemoteMessenger()
         .getRemote(AbstractModeratorController.getModeratorControllerName());
     final JLabel label = new JLabel("Enter Host Remote Access Password, (Leave blank for no password).");
@@ -736,14 +699,7 @@ public class LobbyGamePanel extends JPanel {
     if (result != JOptionPane.OK_OPTION) {
       return;
     }
-    // we sort the table, so get the correct index
-    final int modelIndex = m_tableSorter.modelIndex(selectedIndex);
-    final GameDescription description = m_gameTableModel.get(modelIndex);
-    final String hostedByName = description.getHostedBy().getName();
-    final INode lobbyWatcherNode = new Node(
-        (hostedByName.endsWith("_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME) ? hostedByName
-            : hostedByName + "_" + InGameLobbyWatcher.LOBBY_WATCHER_NAME),
-        description.getHostedBy().getAddress(), description.getHostedBy().getPort());
+    final INode lobbyWatcherNode = getLobbyWatcherNodeForTableRow(selectedIndex);
     final IModeratorController controller = (IModeratorController) m_messengers.getRemoteMessenger()
         .getRemote(AbstractModeratorController.getModeratorControllerName());
     final JLabel label = new JLabel("Enter Host Remote Access Password, (Leave blank for no password).");
