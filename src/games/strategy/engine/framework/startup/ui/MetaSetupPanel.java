@@ -30,7 +30,7 @@ import javax.swing.ScrollPaneConstants;
 
 import games.strategy.engine.EngineVersion;
 import games.strategy.engine.framework.GameRunner2;
-import games.strategy.engine.framework.mapDownload.DownloadMapDialog;
+import games.strategy.engine.framework.mapDownload.InstallMapDialog;
 import games.strategy.engine.framework.startup.mc.SetupPanelModel;
 import games.strategy.engine.framework.ui.NewGameChooser;
 import games.strategy.engine.framework.ui.background.BackgroundTaskRunner;
@@ -196,7 +196,7 @@ public class MetaSetupPanel extends SetupPanel {
   }
 
   private void downloadMaps() {
-    DownloadMapDialog.downloadGames(this);
+    InstallMapDialog.installGames(this);
   }
 
   private void ruleBook() {

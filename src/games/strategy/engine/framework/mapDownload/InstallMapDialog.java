@@ -49,6 +49,8 @@ import games.strategy.util.EventThreadJOptionPane;
 import games.strategy.util.Version;
 
 public class InstallMapDialog extends JDialog {
+  public static final String MAP_DOWNLOAD_XML = "http://downloads.sourceforge.net/project/tripleamaps/triplea_maps.xml";
+
   private static final long serialVersionUID = -1542210716764178580L;
   private static final String DOWNLOAD_URL_PREFIX = "Location: ";
   private static final String MAP_VERSION_PREFIX = "New Version: ";
@@ -436,6 +438,14 @@ public class InstallMapDialog extends JDialog {
     dia.setVisible(true);
   }
 
+  public static void installGames(final Component  parent) {
+    final DownloadRunnable download = new DownloadRunnable(MAP_DOWNLOAD_XML, true);
+
+    BackgroundTaskRunner.runInBackground(parent, "Downloading list of games....", download);
+    installGames(parent, download.getDownloads());
+  }
+
+
   private static String getVersionString(final Version v) {
     if (v == null) {
       return "Unknown";
@@ -447,4 +457,5 @@ public class InstallMapDialog extends JDialog {
     final DownloadFileProperties props = DownloadFileProperties.loadForZip(zipFile);
     return props.getVersion();
   }
+
 }

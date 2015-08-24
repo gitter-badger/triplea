@@ -38,7 +38,6 @@ import games.strategy.debug.ClientLogger;
 import games.strategy.debug.Console;
 import games.strategy.engine.EngineVersion;
 import games.strategy.engine.framework.mapDownload.DownloadFileDescription;
-import games.strategy.engine.framework.mapDownload.DownloadMapDialog;
 import games.strategy.engine.framework.mapDownload.DownloadRunnable;
 import games.strategy.engine.framework.mapDownload.InstallMapDialog;
 import games.strategy.engine.framework.startup.ui.MainFrame;
@@ -848,17 +847,9 @@ public class GameRunner2 {
       try {
         pref.sync();
       } catch (final BackingStoreException e) {
+        ClientLogger.logQuietly(e);
       }
-      // System.out.println("Checking for latest maps");
-      final Vector<String> sites = DownloadMapDialog.getStoredDownloadSites();
-      if (sites == null || sites.isEmpty()) {
-        return false;
-      }
-      final String selectedUrl = sites.get(0);
-      if (selectedUrl == null || selectedUrl.trim().length() == 0) {
-        return false;
-      }
-      final DownloadRunnable download = new DownloadRunnable(selectedUrl, true);
+      final DownloadRunnable download = new DownloadRunnable(InstallMapDialog.MAP_DOWNLOAD_XML, true);
       BackgroundTaskRunner.runInBackground(null, "Checking for out-of-date Maps.", download,
           new CountDownLatchHandler(true));
       if (download.getError() != null) {
@@ -903,7 +894,7 @@ public class GameRunner2 {
     try {
       fileName = URLDecoder.decode(fileName, "UTF-8");
     } catch (final UnsupportedEncodingException e) {
-      e.printStackTrace();
+      ClientLogger.logQuietly(e);
     }
     final String tripleaJarNameWithEngineVersion = getTripleaJarWithEngineVersionStringPath();
     if (fileName.contains(tripleaJarNameWithEngineVersion)) {
@@ -930,10 +921,11 @@ public class GameRunner2 {
 
   public static Image getGameIcon(final Window frame) {
     Image img = null;
+    final String iconName = "ta_icon.png";
     try {
-      img = frame.getToolkit().getImage(GameRunner2.class.getResource("ta_icon.png"));
-    } catch (final Exception ex) {
-      System.out.println("icon not loaded");
+      img = frame.getToolkit().getImage(GameRunner2.class.getResource(iconName));
+    } catch (final Exception e) {
+      ClientLogger.logQuietly(iconName + " not loaded.", e);
     }
     final MediaTracker tracker = new MediaTracker(frame);
     tracker.addImage(img, 0);
