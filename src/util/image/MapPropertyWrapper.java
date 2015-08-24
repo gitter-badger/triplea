@@ -237,7 +237,7 @@ public class MapPropertyWrapper<T> extends AEditableProperty {
       final boolean editable) {
     final List<MapPropertyWrapper> properties = createProperties(object);
     final PropertiesUI ui = new PropertiesUI(properties, editable);
-    return new Tuple<PropertiesUI, List<MapPropertyWrapper>>(ui, properties);
+    return Tuple.of(ui, properties);
   }
 
   @Override

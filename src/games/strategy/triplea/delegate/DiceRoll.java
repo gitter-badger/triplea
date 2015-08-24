@@ -106,7 +106,7 @@ public class DiceRoll implements Externalizable {
       highestAttack = chosenDiceSize / 2; // TODO: sadly the whole low luck section falls apart if AA are hitting at greater than half the
                                           // value of dice, and I don't feel like rewriting it
     }
-    return new Tuple<Integer, Integer>(highestAttack, chosenDiceSize);
+    return Tuple.of(highestAttack, chosenDiceSize);
   }
 
   public static int getTotalAAattacks(final Collection<Unit> defendingEnemyAA,
@@ -210,7 +210,7 @@ public class DiceRoll implements Externalizable {
         (defending ? Matches.UnitAttackAAisGreaterThanZeroAndMaxAAattacksIsNotZero
             : Matches.UnitOffensiveAttackAAisGreaterThanZeroAndMaxAAattacksIsNotZero));
     if (defendingAA.size() <= 0) {
-      return new Triple<Integer, Integer, Boolean>(0, 0, false);
+      return Triple.of(0, 0, false);
     }
     sortAAHighToLow(defendingAA, data, defending); // we want to make sure the higher powers fire
     // this is confusing, but what we want to do is the following:
@@ -319,7 +319,7 @@ public class DiceRoll implements Externalizable {
         rolledAt.add(hitAt);
       }
     }
-    return new Triple<Integer, Integer, Boolean>(totalPower, hits, (rolledAt.size() == 1));
+    return Triple.of(totalPower, hits, (rolledAt.size() == 1));
   }
 
   private static int getLowLuckHits(final IDelegateBridge bridge, final List<Die> sortedDice, final int totalPower,
@@ -513,7 +513,7 @@ public class DiceRoll implements Externalizable {
           strength = 0;
         }
       }
-      rVal.put(current, new Tuple<Integer, Integer>(strength, rolls));
+      rVal.put(current, Tuple.of(strength, rolls));
     }
     return rVal;
   }
@@ -562,7 +562,7 @@ public class DiceRoll implements Externalizable {
         }
       }
     }
-    return new Tuple<Integer, Integer>(totalPower, totalRolls);
+    return Tuple.of(totalPower, totalRolls);
   }
 
   /**

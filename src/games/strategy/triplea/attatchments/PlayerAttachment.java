@@ -119,7 +119,7 @@ public class PlayerAttachment extends DefaultAttachment {
         }
       }
     }
-    m_placementLimit.add(new Triple<Integer, String, HashSet<UnitType>>(max, s[1], types));
+    m_placementLimit.add(Triple.of(max, s[1], types));
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -171,7 +171,7 @@ public class PlayerAttachment extends DefaultAttachment {
         }
       }
     }
-    m_movementLimit.add(new Triple<Integer, String, HashSet<UnitType>>(max, s[1], types));
+    m_movementLimit.add(Triple.of(max, s[1], types));
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -223,7 +223,7 @@ public class PlayerAttachment extends DefaultAttachment {
         }
       }
     }
-    m_attackingLimit.add(new Triple<Integer, String, HashSet<UnitType>>(max, s[1], types));
+    m_attackingLimit.add(Triple.of(max, s[1], types));
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)

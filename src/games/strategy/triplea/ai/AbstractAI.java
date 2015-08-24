@@ -703,6 +703,6 @@ public abstract class AbstractAI extends AbstractBaseAI implements ITripleaPlaye
         }
       }
     }
-    return new Tuple<Territory, Set<Unit>>(picked, unitsToPlace);
+    return Tuple.of(picked, unitsToPlace);
   }
 }

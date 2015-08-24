@@ -330,7 +330,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
     getBool(s[3]);
     getBool(s[4]);
     getBool(s[5]);
-    m_activateTrigger.add(new Tuple<String, String>(s[0], options));
+    m_activateTrigger.add(Tuple.of(s[0], options));
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -746,7 +746,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
     if (s[1].equals("UnitSupportAttachment") && !s[0].startsWith(Constants.SUPPORT_ATTACHMENT_PREFIX)) {
       throw new GameParseException("attachment incorrectly named:" + s[0] + thisErrorMsg());
     }
-    m_unitAttachmentName = new Tuple<String, String>(s[1], s[0]);
+    m_unitAttachmentName = Tuple.of(s[1], s[0]);
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -756,7 +756,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
 
   public Tuple<String, String> getUnitAttachmentName() {
     if (m_unitAttachmentName == null) {
-      return new Tuple<String, String>("UnitAttachment", Constants.UNIT_ATTACHMENT_NAME);
+      return Tuple.of("UnitAttachment", Constants.UNIT_ATTACHMENT_NAME);
     }
     return m_unitAttachmentName;
   }
@@ -783,7 +783,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
     }
     final String property = s[s.length - 1]; // the last one is the property we are changing, while the rest is the string we are changing
                                              // it to
-    m_unitProperty.add(new Tuple<String, String>(property, getValueFromStringArrayForAllExceptLastSubstring(s)));
+    m_unitProperty.add(Tuple.of(property, getValueFromStringArrayForAllExceptLastSubstring(s)));
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -865,7 +865,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
     if (s[1].equals("CanalAttachment") && !s[0].startsWith(Constants.CANAL_ATTACHMENT_PREFIX)) {
       throw new GameParseException("attachment incorrectly named:" + s[0] + thisErrorMsg());
     }
-    m_territoryAttachmentName = new Tuple<String, String>(s[1], s[0]);
+    m_territoryAttachmentName = Tuple.of(s[1], s[0]);
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -875,7 +875,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
 
   public Tuple<String, String> getTerritoryAttachmentName() {
     if (m_territoryAttachmentName == null) {
-      return new Tuple<String, String>("TerritoryAttachment", Constants.TERRITORY_ATTACHMENT_NAME);
+      return Tuple.of("TerritoryAttachment", Constants.TERRITORY_ATTACHMENT_NAME);
     }
     return m_territoryAttachmentName;
   }
@@ -902,7 +902,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
     }
     final String property = s[s.length - 1]; // the last one is the property we are changing, while the rest is the string we are changing
                                              // it to
-    m_territoryProperty.add(new Tuple<String, String>(property, getValueFromStringArrayForAllExceptLastSubstring(s)));
+    m_territoryProperty.add(Tuple.of(property, getValueFromStringArrayForAllExceptLastSubstring(s)));
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -1004,7 +1004,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
     if (s[1].equals("UserActionAttachment") && !s[0].startsWith(Constants.USERACTION_ATTACHMENT_PREFIX)) {
       throw new GameParseException("attachment incorrectly named:" + s[0] + thisErrorMsg());
     }
-    m_playerAttachmentName = new Tuple<String, String>(s[1], s[0]);
+    m_playerAttachmentName = Tuple.of(s[1], s[0]);
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -1014,7 +1014,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
 
   public Tuple<String, String> getPlayerAttachmentName() {
     if (m_playerAttachmentName == null) {
-      return new Tuple<String, String>("PlayerAttachment", Constants.PLAYER_ATTACHMENT_NAME);
+      return Tuple.of("PlayerAttachment", Constants.PLAYER_ATTACHMENT_NAME);
     }
     return m_playerAttachmentName;
   }
@@ -1041,7 +1041,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
     }
     final String property = s[s.length - 1]; // the last one is the property we are changing, while the rest is the string we are changing
                                              // it to
-    m_playerProperty.add(new Tuple<String, String>(property, getValueFromStringArrayForAllExceptLastSubstring(s)));
+    m_playerProperty.add(Tuple.of(property, getValueFromStringArrayForAllExceptLastSubstring(s)));
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -1121,7 +1121,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
     if (s[1].equals("RelationshipTypeAttachment") && !s[0].startsWith(Constants.RELATIONSHIPTYPE_ATTACHMENT_NAME)) {
       throw new GameParseException("attachment incorrectly named:" + s[0] + thisErrorMsg());
     }
-    m_relationshipTypeAttachmentName = new Tuple<String, String>(s[1], s[0]);
+    m_relationshipTypeAttachmentName = Tuple.of(s[1], s[0]);
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -1131,7 +1131,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
 
   public Tuple<String, String> getRelationshipTypeAttachmentName() {
     if (m_relationshipTypeAttachmentName == null) {
-      return new Tuple<String, String>("RelationshipTypeAttachment", Constants.RELATIONSHIPTYPE_ATTACHMENT_NAME);
+      return Tuple.of("RelationshipTypeAttachment", Constants.RELATIONSHIPTYPE_ATTACHMENT_NAME);
     }
     return m_relationshipTypeAttachmentName;
   }
@@ -1159,7 +1159,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
     final String property = s[s.length - 1]; // the last one is the property we are changing, while the rest is the string we are changing
                                              // it to
     m_relationshipTypeProperty
-        .add(new Tuple<String, String>(property, getValueFromStringArrayForAllExceptLastSubstring(s)));
+        .add(Tuple.of(property, getValueFromStringArrayForAllExceptLastSubstring(s)));
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -1239,7 +1239,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
     if (s[1].equals("TerritoryEffectAttachment") && !s[0].startsWith(Constants.TERRITORYEFFECT_ATTACHMENT_NAME)) {
       throw new GameParseException("attachment incorrectly named:" + s[0] + thisErrorMsg());
     }
-    m_territoryEffectAttachmentName = new Tuple<String, String>(s[1], s[0]);
+    m_territoryEffectAttachmentName = Tuple.of(s[1], s[0]);
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
@@ -1249,7 +1249,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
 
   public Tuple<String, String> getTerritoryEffectAttachmentName() {
     if (m_territoryEffectAttachmentName == null) {
-      return new Tuple<String, String>("TerritoryEffectAttachment", Constants.TERRITORYEFFECT_ATTACHMENT_NAME);
+      return Tuple.of("TerritoryEffectAttachment", Constants.TERRITORYEFFECT_ATTACHMENT_NAME);
     }
     return m_territoryEffectAttachmentName;
   }
@@ -1277,7 +1277,7 @@ public class TriggerAttachment extends AbstractTriggerAttachment implements ICon
     final String property = s[s.length - 1]; // the last one is the property we are changing, while the rest is the string we are changing
                                              // it to
     m_territoryEffectProperty
-        .add(new Tuple<String, String>(property, getValueFromStringArrayForAllExceptLastSubstring(s)));
+        .add(Tuple.of(property, getValueFromStringArrayForAllExceptLastSubstring(s)));
   }
 
   @GameProperty(xmlProperty = true, gameProperty = true, adds = false)
