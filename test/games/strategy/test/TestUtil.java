@@ -1,10 +1,12 @@
 package games.strategy.test;
 
-import java.lang.reflect.InvocationTargetException;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 import java.awt.Component;
 import java.lang.reflect.InvocationTargetException;
 import javax.swing.SwingUtilities;
+
 
 public class TestUtil {
   /**
@@ -57,4 +59,5 @@ public class TestUtil {
       assertThat(component.isEnabled(), is(true));
     }
   }
+
 }
