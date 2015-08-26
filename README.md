@@ -1,6 +1,8 @@
 Build system
 ============
 
+[![Join the chat at https://gitter.im/DanVanAtta/triplea](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DanVanAtta/triplea?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [Gradle](www.gradle.org) is used. The gradlew (on Windows gradlew.bat) file is a proxy to execute build commands. 
 On first call these files will install the correct version of Gradle on your system. Most commonly used commands:
 
